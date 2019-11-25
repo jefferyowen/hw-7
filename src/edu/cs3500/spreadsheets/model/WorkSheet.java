@@ -3,12 +3,14 @@ package edu.cs3500.spreadsheets.model;
 
 import java.util.ArrayList;
 
+import edu.cs3500.spreadsheets.view.ReadOnlyView;
+
 /**
  * A worksheet consisted of cells.
  *
  * @param <R> the representation of a cell used.
  */
-public interface WorkSheet<R> {
+public interface WorkSheet<R> extends ReadOnlyView {
 
   public void createWorkSheet(int row, int col);
 

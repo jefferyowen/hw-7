@@ -22,43 +22,8 @@ public class ReadOnlyTextual implements ReadOnlyView {
   }
 
   @Override
-  public void createWorkSheet(int row, int col) {
-    // shouldn't do anything as this is the read only file.
-  }
-
-  @Override
   public String evaluate(int row, int col) {
     return this.spreadsheet.get(col).get(row).getCellContent().evaluate();
-  }
-
-  @Override
-  public void setCell(int row, int col, CellComponent value) throws IllegalArgumentException {
-    // shouldn't do anything as this is the read only file.
-  }
-
-  @Override
-  public void addCell(int row, int col) {
-    // shouldn't do anything as this is the read only file.
-  }
-
-  @Override
-  public void addCol(int value) {
-    // shouldn't do anything as this is the read only file.
-  }
-
-  @Override
-  public void addCol() {
-    // shouldn't do anything as this is the read only file.
-  }
-
-  @Override
-  public void addRow(int row, int value) {
-    // shouldn't do anything as this is the read only file.
-  }
-
-  @Override
-  public void addRow() {
-    // shouldn't do anything as this is the read only file.
   }
 
   @Override
