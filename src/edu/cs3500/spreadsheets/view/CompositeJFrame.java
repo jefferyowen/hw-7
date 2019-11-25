@@ -8,10 +8,11 @@ import java.awt.event.KeyListener;
 import javax.swing.*;
 import javax.swing.table.DefaultTableModel;
 
+import edu.cs3500.spreadsheets.controller.Features;
 import edu.cs3500.spreadsheets.model.WorkSheet;
 import edu.cs3500.spreadsheets.model.WorkSheetBasic;
 
-public class CompositeJFrame extends JFrame implements EditView{
+public class CompositeJFrame extends JFrame implements EditView {
 
   private JScrollPane sp;
   public ExcelJFrame ejf;
@@ -21,7 +22,7 @@ public class CompositeJFrame extends JFrame implements EditView{
   private DefaultTableModel dtm;
   private ReadOnlyTextual ws;
   private JButton confirm;
-  private JButton cancel;
+  private JButton clear;
   private JTextField jtf;
   private JPanel worksheet;
 
@@ -56,7 +57,7 @@ public class CompositeJFrame extends JFrame implements EditView{
 
     this.confirm = new JButton("Confirm");
     this.confirm.setActionCommand("Confirm Button");
-    this.cancel = new JButton("Cancel");
+    this.clear = new JButton("Clear");
     this.cancel.setActionCommand("Cancel Button");
 
     JPanel input = new JPanel();
@@ -77,22 +78,10 @@ public class CompositeJFrame extends JFrame implements EditView{
   }
 
 
-
   @Override
   public void render() {
     this.f.setVisible(true);
   }
-
-  @Override
-  public void setListeners(ActionListener clicks, FocusListener fo) {
-    this.confirm.addActionListener(clicks);
-    this.cancel.addActionListener(clicks);
-    System.out.print(this.worksheet.isFocusable());
-    this.worksheet.addFocusListener(fo);
-    this.p.addFocusListener(fo);
-  }
-
-
 
   @Override
   public String getInputString() {
@@ -107,6 +96,13 @@ public class CompositeJFrame extends JFrame implements EditView{
   @Override
   public void getSelectedCell() {
     this.ejf.getSelectedCell();
+  }
+
+  @Override
+  public void addFeatures(Features features) {
+    confirm.addActionListener(evt -> features.setCellContentsOfCell(jtf.toString()));
+    clear.addActionListener(evt -> features.clearToolbar());
+    
   }
 
 }

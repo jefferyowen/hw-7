@@ -3,13 +3,9 @@ package edu.cs3500.spreadsheets.view;
 import java.awt.event.ActionListener;
 import java.awt.event.FocusListener;
 
+import edu.cs3500.spreadsheets.controller.Features;
+
 public interface EditView extends View {
-  /**
-   * Sets up the listeners for the view.
-   * @param clicks The action listener.
-   * @param fo the mouse listener.
-   */
-  public void setListeners(ActionListener clicks, FocusListener fo);
 
   /**
    * Get the string from the text field and return it
@@ -25,5 +21,7 @@ public interface EditView extends View {
   public void clearInputString();
 
   public void getSelectedCell();
+
+  public void addFeatures(Features features);
 
 }
