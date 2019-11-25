@@ -71,7 +71,7 @@ public class CompositeJFrame extends JFrame implements EditView{
     this.p.add(worksheet, BorderLayout.SOUTH);
 
     this.f.add(p);
-    this.f.setSize(800, 500);
+    this.f.setSize(800, 501);
     this.f.pack();
     this.f.setResizable(false);
   }
