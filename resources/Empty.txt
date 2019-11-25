@@ -1,0 +1,14 @@
+A1  3.00
+A2 "spider"
+A3 19.00
+A4 false
+B1 =(< A1 A3)
+B3 =(SUM A1 A3)
+B4 =(SUM A1 A3)
+C1 =(REPEAT A2)
+C3 =(SUM A1:B4 )
+C4 =(SUM A1:B4 )
+D1 =(< 20.00  0.00)
+D2  6.00
+D3 true
+D4 "fudge"

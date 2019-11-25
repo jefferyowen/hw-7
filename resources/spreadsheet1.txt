@@ -1,0 +1,14 @@
+A1 6
+A2 14
+A3 false
+A4 "spider"
+B1 true
+B3 100
+B4 13
+C1 "google"
+C2 "deer"
+C4 false
+D1 "gong"
+D2 98
+D3 44
+D4 "inuit"

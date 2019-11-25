@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="75e67612-0d55-4a0a-bac3-9174dd4ce53f" name="Default Changelist" comment="" />
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+        <option value="Interface" />
+      </list>
+    </option>
+  </component>
+  <component name="ProjectId" id="1Tqb1eRk9TmSVAUv7FAnUg3oWR2" />
+  <component name="PropertiesComponent">
+    <property name="Downloaded.Files.Path.Enabled" value="false" />
+    <property name="Repository.Attach.Annotations" value="false" />
+    <property name="Repository.Attach.JavaDocs" value="false" />
+    <property name="Repository.Attach.Sources" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="project.structure.last.edited" value="Modules" />
+    <property name="project.structure.proportion" value="0.0" />
+    <property name="project.structure.side.proportion" value="0.2" />
+    <property name="settings.editor.selected.configurable" value="preferences.sourceCode.Java" />
+  </component>
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
+  </component>
+  <component name="RunManager" selected="Application.edit ss1">
+    <configuration name="edit blank" type="Application" factoryName="Application">
+      <option name="MAIN_CLASS_NAME" value="edu.cs3500.spreadsheets.BeyondGood" />
+      <module name="hw7" />
+      <option name="PROGRAM_PARAMETERS" value="-edit" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/resources" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="edit ss1" type="Application" factoryName="Application">
+      <option name="MAIN_CLASS_NAME" value="edu.cs3500.spreadsheets.BeyondGood" />
+      <module name="hw7" />
+      <option name="PROGRAM_PARAMETERS" value="-in spreadsheet1.txt -edit" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/resources" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="gui ss1" type="Application" factoryName="Application">
+      <option name="MAIN_CLASS_NAME" value="edu.cs3500.spreadsheets.BeyondGood" />
+      <module name="hw7" />
+      <option name="PROGRAM_PARAMETERS" value="-in spreadsheet1.txt -gui" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/resources" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="All in hw7" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="hw7" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="TEST_OBJECT" value="package" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Hw5Checks" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="hw7" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="Hw5Checks" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <list>
+      <item itemvalue="Application.edit blank" />
+      <item itemvalue="Application.edit ss1" />
+      <item itemvalue="Application.gui ss1" />
+      <item itemvalue="JUnit.All in hw7" />
+      <item itemvalue="JUnit.Hw5Checks" />
+    </list>
+    <recent_temporary>
+      <list>
+        <item itemvalue="JUnit.Hw5Checks" />
+        <item itemvalue="JUnit.All in hw7" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="75e67612-0d55-4a0a-bac3-9174dd4ce53f" name="Default Changelist" comment="" />
+      <created>1574190358599</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1574190358599</updated>
+    </task>
+    <servers />
+  </component>
+</project>
