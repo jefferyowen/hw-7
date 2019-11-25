@@ -184,7 +184,7 @@ public class Hw6Checks {
   @Test(expected = IllegalArgumentException.class)
   public void testTextualViewNull() {
     initData("spreadsheet1.txt");
-    TextualView test = new TextualView(new ReadOnlyTextual(ws), null);
+    TextualView test = new TextualView(ws, null);
   }
  **/
 }
