@@ -58,12 +58,12 @@ public class CompositeJFrame extends JFrame implements EditView {
     this.confirm = new JButton("Confirm");
     this.confirm.setActionCommand("Confirm Button");
     this.clear = new JButton("Clear");
-    this.cancel.setActionCommand("Cancel Button");
+    this.clear.setActionCommand("Cancel Button");
 
     JPanel input = new JPanel();
     input.add(jtf);
     input.add(confirm);
-    input.add(cancel);
+    input.add(clear);
     this.worksheet = new JPanel();
     this.worksheet.add(ejf.getContentPane());
     this.worksheet.setFocusable(true);
@@ -101,6 +101,8 @@ public class CompositeJFrame extends JFrame implements EditView {
   @Override
   public void addFeatures(Features features) {
     confirm.addActionListener(evt -> features.setCellContentsOfCell(jtf.toString()));
+
+
     clear.addActionListener(evt -> features.clearToolbar());
     
   }

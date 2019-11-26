@@ -28,12 +28,12 @@ public class ExcelController implements Features{
   }
 
   @Override
-  public void setCellContentsOfCell() {
+  public void setCellContentsOfCell(String contents) {
 
   }
 
   @Override
   public void clearToolbar() {
-
+    this.view.clearInputString();
   }
 }
