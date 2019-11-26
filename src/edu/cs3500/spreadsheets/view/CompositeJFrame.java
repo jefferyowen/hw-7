@@ -127,7 +127,6 @@ public class CompositeJFrame extends JFrame implements EditView {
       @Override
       public void keyTyped(KeyEvent e) {
         if(e.getKeyChar() == KeyEvent.VK_DELETE) {
-          System.out.println("git");
           features.clearCell();
         }
       }
