@@ -119,13 +119,12 @@ public class CompositeJFrame extends JFrame implements EditView {
     confirm.addActionListener(evt -> features.setCellContentsOfCell(this.getInputString()));
 
 
-    clear.addActionListener(evt -> features.clearCell());
+    clear.addActionListener(evt -> features.resetTextbar());
 
 
     this.ejf.getJTable().addMouseListener(new MouseAdapter() {
       @Override
       public void mouseClicked(MouseEvent e) {
-        System.out.println(ejf.getJTable().getSelectedRow() + 1 + " " + (ejf.getJTable().getSelectedColumn()+ 1));
         updateSelectedCoord(ejf.getJTable().getSelectedRow() + 1,
                 ejf.getJTable().getSelectedColumn() + 1);
        features.setSelectedCell();

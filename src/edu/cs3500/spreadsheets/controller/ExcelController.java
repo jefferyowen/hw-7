@@ -66,6 +66,7 @@ public class ExcelController implements Features {
 
   @Override
   public void resetTextbar() {
-
+    this.view.setInputString(this.model.getStringOfCell(this.currentCoord.col - 1,
+            this.currentCoord.row - 1));
   }
 }
