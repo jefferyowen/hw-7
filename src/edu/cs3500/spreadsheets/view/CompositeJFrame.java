@@ -122,7 +122,7 @@ public class CompositeJFrame extends JFrame implements EditView {
     clear.addActionListener(evt -> features.clearCell());
 
 
-    ejf.getJTable().addMouseListener(new MouseAdapter() {
+    this.ejf.getJTable().addMouseListener(new MouseAdapter() {
       @Override
       public void mouseClicked(MouseEvent e) {
         System.out.println(ejf.getJTable().getSelectedRow() + " " +
