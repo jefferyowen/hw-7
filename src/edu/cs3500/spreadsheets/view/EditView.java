@@ -3,6 +3,7 @@ package edu.cs3500.spreadsheets.view;
 
 import edu.cs3500.spreadsheets.controller.Features;
 import edu.cs3500.spreadsheets.model.Coord;
+import edu.cs3500.spreadsheets.model.WorkSheet;
 
 public interface EditView extends View {
 
@@ -26,4 +27,6 @@ public interface EditView extends View {
   public void updateSelectedCoord(int row, int col);
 
   public void setInputString(String contents);
+
+  public void updateModel(WorkSheet ws);
 }
