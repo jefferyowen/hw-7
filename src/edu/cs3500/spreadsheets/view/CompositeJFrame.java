@@ -106,10 +106,14 @@ public class CompositeJFrame extends JFrame implements EditView {
 
   @Override
   public void addFeatures(Features features) {
+
+
     confirm.addActionListener(evt -> features.setCellContentsOfCell(jtf.toString()));
 
 
-    clear.addActionListener(evt -> features.clearToolbar());
+    clear.addActionListener(evt -> features.clearCell());
+
+
     ejf.getJTable().addMouseListener(new MouseAdapter() {
       @Override
       public void mouseClicked(MouseEvent e) {
