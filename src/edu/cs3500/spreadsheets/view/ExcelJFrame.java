@@ -97,6 +97,7 @@ public class ExcelJFrame extends JFrame implements View {
   public ExcelJTable getJTable() {
     return this.j;
   }
+
   /**
    * Reduces duplication of code in constructors.
    */
@@ -223,4 +224,8 @@ public class ExcelJFrame extends JFrame implements View {
 
   }
 
+  public void updateTable(WorkSheet ws) {
+    this.ws = new ReadOnlyTextual(ws);
+    this.readData();
+  }
 }
