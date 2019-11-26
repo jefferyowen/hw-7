@@ -10,11 +10,19 @@ import edu.cs3500.spreadsheets.sexp.Parser;
 import edu.cs3500.spreadsheets.sexp.Sexp;
 import edu.cs3500.spreadsheets.view.EditView;
 
+/**
+ * Controller for our -edit function. Allows user to have access to a view and a model.
+ */
 public class ExcelController implements Features {
   private WorkSheet model;
   private EditView view;
   private Coord currentCoord;
 
+  /**
+   * Constructor for the controller, given the model and view.
+   * @param m The model that can be manipulated throughout the program.
+   * @param v The graphical view of the current model that the user gets.
+   */
   public ExcelController(WorkSheet m, EditView v) {
     this.model = m;
     this.view = v;

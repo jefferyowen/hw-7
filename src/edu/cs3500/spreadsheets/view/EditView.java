@@ -26,8 +26,6 @@ public interface EditView extends View {
 
   public void addFeatures(Features features);
 
-  public void removeFeatures(Features feautures);
-
   public void updateSelectedCoord(int row, int col);
 
   public void updateModel(WorkSheet ws);

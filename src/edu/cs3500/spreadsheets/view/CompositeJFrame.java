@@ -14,8 +14,8 @@ import edu.cs3500.spreadsheets.model.Coord;
 import edu.cs3500.spreadsheets.model.WorkSheet;
 
 /**
- * Adds ability of updating Cell values in the graphical view. Can clear changes, and
- * revert back to original value. Also able to delete Cells.
+ * Adds ability of updating Cell values in the graphical view. Can clear changes, and revert back to
+ * original value. Also able to delete Cells.
  */
 public class CompositeJFrame extends JFrame implements EditView {
 
@@ -143,15 +143,6 @@ public class CompositeJFrame extends JFrame implements EditView {
         features.setSelectedCell();
       }
     });
-  }
-
-  @Override
-  public void removeFeatures(Features features) {
-
-    MouseListener[] mListener = this.ejf.getJTable().getMouseListeners();
-    for (MouseListener ml : mListener) {
-      this.ejf.getJTable().removeMouseListener(ml);
-    }
   }
 
   @Override

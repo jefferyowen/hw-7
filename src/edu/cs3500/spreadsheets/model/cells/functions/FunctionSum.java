@@ -59,7 +59,7 @@ public class FunctionSum implements CellComponentFormulaFunction<Double> {
   public Double evaluateFormula() {
     double sum = 0.0;
     sum += r1.accept(new CellComponentVisitorAdd());
-    if(r2 != null) {
+    if (r2 != null) {
       sum += r2.accept(new CellComponentVisitorAdd());
     }
     return sum;
