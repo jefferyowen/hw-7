@@ -20,6 +20,7 @@ public class ExcelController implements Features {
 
   /**
    * Constructor for the controller, given the model and view.
+   *
    * @param m The model that can be manipulated throughout the program.
    * @param v The graphical view of the current model that the user gets.
    */

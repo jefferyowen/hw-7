@@ -45,7 +45,6 @@ public class WorkSheetBasic implements WorkSheet<Cell> {
       this.addCell(row, col);
     }
     this.spreadsheet.get(col).set(row, new Cell(value, new Coord(col + 1, row + 1)));
-    this.update(row, col);
   }
 
   @Override
@@ -128,7 +127,5 @@ public class WorkSheetBasic implements WorkSheet<Cell> {
   }
 
 
-  private void update(int row, int col) {
 
-  }
 }
