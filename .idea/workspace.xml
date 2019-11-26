@@ -3,12 +3,16 @@
   <component name="ChangeListManager">
     <list default="true" id="75e67612-0d55-4a0a-bac3-9174dd4ce53f" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/hw7/edu/cs3500/spreadsheets/BeyondGood.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/hw7/edu/cs3500/spreadsheets/BeyondGood.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/hw7/edu/cs3500/spreadsheets/controller/ExcelController.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/hw7/edu/cs3500/spreadsheets/controller/ExcelController.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/hw7/edu/cs3500/spreadsheets/view/CompositeJFrame.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/hw7/edu/cs3500/spreadsheets/view/CompositeJFrame.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/hw7/edu/cs3500/spreadsheets/view/EditView.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/hw7/edu/cs3500/spreadsheets/view/EditView.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/hw7/edu/cs3500/spreadsheets/view/ExcelJFrame$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/hw7/edu/cs3500/spreadsheets/view/ExcelJFrame$1.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/hw7/edu/cs3500/spreadsheets/view/ExcelJFrame.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/hw7/edu/cs3500/spreadsheets/view/ExcelJFrame.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/edu/cs3500/spreadsheets/BeyondGood.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/edu/cs3500/spreadsheets/BeyondGood.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/edu/cs3500/spreadsheets/controller/ExcelController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/edu/cs3500/spreadsheets/controller/ExcelController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/edu/cs3500/spreadsheets/view/CompositeJFrame.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/edu/cs3500/spreadsheets/view/CompositeJFrame.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/edu/cs3500/spreadsheets/view/EditView.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/edu/cs3500/spreadsheets/view/EditView.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/edu/cs3500/spreadsheets/view/ExcelJFrame.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/edu/cs3500/spreadsheets/view/ExcelJFrame.java" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -53,7 +57,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Application.edit ss1">
+  <component name="RunManager" selected="Application.edit blank">
     <configuration name="edit blank" type="Application" factoryName="Application">
       <option name="MAIN_CLASS_NAME" value="edu.cs3500.spreadsheets.BeyondGood" />
       <module name="hw7" />
@@ -158,7 +162,14 @@
       <option name="project" value="LOCAL" />
       <updated>1574742650803</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="commit">
+      <created>1574743599376</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1574743599376</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
