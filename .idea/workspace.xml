@@ -7,15 +7,18 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="75e67612-0d55-4a0a-bac3-9174dd4ce53f" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/test/Hw7Checks.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/hw7/edu/cs3500/spreadsheets/controller/Controller.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/hw7/edu/cs3500/spreadsheets/model/cells/functions/FunctionProduct.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/hw7/edu/cs3500/spreadsheets/model/cells/functions/FunctionProduct.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/hw7/edu/cs3500/spreadsheets/model/cells/functions/FunctionSum.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/hw7/edu/cs3500/spreadsheets/model/cells/functions/FunctionSum.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/hw7/edu/cs3500/spreadsheets/view/CompositeJFrame$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/hw7/edu/cs3500/spreadsheets/view/CompositeJFrame$1.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/hw7/edu/cs3500/spreadsheets/view/CompositeJFrame.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/hw7/edu/cs3500/spreadsheets/view/CompositeJFrame.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/edu/cs3500/spreadsheets/controller/Controller.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/edu/cs3500/spreadsheets/view/CompositeJFrame.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/edu/cs3500/spreadsheets/view/CompositeJFrame.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/edu/cs3500/spreadsheets/view/ExcelJFrame.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/edu/cs3500/spreadsheets/view/ExcelJFrame.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/edu/cs3500/spreadsheets/view/ExcelJTable.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/edu/cs3500/spreadsheets/view/ExcelJTable.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/edu/cs3500/spreadsheets/view/TextualView.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/edu/cs3500/spreadsheets/view/TextualView.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/hw7/edu/cs3500/spreadsheets/view/ExcelJFrame$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/hw7/edu/cs3500/spreadsheets/view/ExcelJFrame$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/hw7/edu/cs3500/spreadsheets/view/ExcelJFrame.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/hw7/edu/cs3500/spreadsheets/view/ExcelJFrame.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/hw7/edu/cs3500/spreadsheets/view/ExcelJTable.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/hw7/edu/cs3500/spreadsheets/view/ExcelJTable.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/hw7/edu/cs3500/spreadsheets/view/TextualView.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/hw7/edu/cs3500/spreadsheets/view/TextualView.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/edu/cs3500/spreadsheets/model/cells/functions/FunctionProduct.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/edu/cs3500/spreadsheets/model/cells/functions/FunctionProduct.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/edu/cs3500/spreadsheets/model/cells/functions/FunctionSum.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/edu/cs3500/spreadsheets/model/cells/functions/FunctionSum.java" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -59,7 +62,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Application.edit ss2">
+  <component name="RunManager" selected="Application.edit tri50">
     <configuration name="edit blank" type="Application" factoryName="Application">
       <option name="MAIN_CLASS_NAME" value="edu.cs3500.spreadsheets.BeyondGood" />
       <module name="hw7" />
@@ -289,7 +292,14 @@
       <option name="project" value="LOCAL" />
       <updated>1574795671123</updated>
     </task>
-    <option name="localTasksCounter" value="21" />
+    <task id="LOCAL-00021" summary="commit">
+      <created>1574801941621</created>
+      <option name="number" value="00021" />
+      <option name="presentableId" value="LOCAL-00021" />
+      <option name="project" value="LOCAL" />
+      <updated>1574801941621</updated>
+    </task>
+    <option name="localTasksCounter" value="22" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">

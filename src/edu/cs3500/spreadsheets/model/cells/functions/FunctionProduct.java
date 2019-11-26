@@ -59,9 +59,9 @@ public class FunctionProduct implements CellComponentFormulaFunction<Double> {
   @Override
   public Double evaluateFormula() {
     double product = 1.0;
-    for (Coord c : this.toBeMultiplied) {
-      product *= this.workSheet.getCellAt(c.row - 1, c.col - 1).getCellContent().
-              accept(new CellComponentVisitorMultiply());
+    product *= r1.accept(new CellComponentVisitorMultiply());
+    if(r2 != null) {
+      product *= r2.accept(new CellComponentVisitorMultiply());
     }
     return product;
   }

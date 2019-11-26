@@ -58,9 +58,9 @@ public class FunctionSum implements CellComponentFormulaFunction<Double> {
   @Override
   public Double evaluateFormula() {
     double sum = 0.0;
-    for (Coord c : this.toBeAdded) {
-      sum += this.workSheet.getCellAt(c.row - 1, c.col - 1).getCellContent().
-              accept(new CellComponentVisitorAdd());
+    sum += r1.accept(new CellComponentVisitorAdd());
+    if(r2 != null) {
+      sum += r2.accept(new CellComponentVisitorAdd());
     }
     return sum;
   }
