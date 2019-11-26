@@ -1,10 +1,8 @@
 package edu.cs3500.spreadsheets.view;
 
-import java.awt.event.ActionListener;
-import java.awt.event.FocusListener;
 
 import edu.cs3500.spreadsheets.controller.Features;
-import edu.cs3500.spreadsheets.model.Cell;
+import edu.cs3500.spreadsheets.model.Coord;
 
 public interface EditView extends View {
 
@@ -21,9 +19,9 @@ public interface EditView extends View {
 
   public void clearInputString();
 
-  public Cell getSelectedCell();
+  public Coord getSelectedCoord();
 
   public void addFeatures(Features features);
 
-  public void updateSelectedCell();
+  public void updateSelectedCoord(int row, int col);
 }

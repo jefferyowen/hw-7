@@ -12,6 +12,7 @@ import javax.swing.table.DefaultTableModel;
 
 import edu.cs3500.spreadsheets.controller.Features;
 import edu.cs3500.spreadsheets.model.Cell;
+import edu.cs3500.spreadsheets.model.Coord;
 import edu.cs3500.spreadsheets.model.SimpleWorkSheetBuilder;
 import edu.cs3500.spreadsheets.model.WorkSheet;
 import edu.cs3500.spreadsheets.model.WorkSheetBasic;
@@ -27,7 +28,7 @@ public class CompositeJFrame extends JFrame implements EditView {
   private JButton clear;
   private JTextField jtf;
   private JPanel worksheet;
-  private Cell currentCell;
+  private Coord currentCoord;
 
   /**
    * Constructor for Editable Graphical view given Worksheet.
@@ -79,7 +80,7 @@ public class CompositeJFrame extends JFrame implements EditView {
     this.f.setSize(800, 501);
     this.f.pack();
     this.f.setResizable(false);
-    this.currentCell = (Cell)ws.getCellAt(0,0);
+    this.currentCoord = new Coord(1,1);
   }
 
 
@@ -99,8 +100,8 @@ public class CompositeJFrame extends JFrame implements EditView {
   }
 
   @Override
-  public Cell getSelectedCell() {
-      return this.currentCell;
+  public Coord getSelectedCoord() {
+    return this.currentCoord;
   }
 
 
@@ -117,16 +118,16 @@ public class CompositeJFrame extends JFrame implements EditView {
     ejf.getJTable().addMouseListener(new MouseAdapter() {
       @Override
       public void mouseClicked(MouseEvent e) {
+        updateSelectedCoord(ejf.getJTable().getSelectedRow() + 1,
+                ejf.getJTable().getSelectedColumn() + 1);
        features.setSelectedCell();
-       updateSelectedCell();
       }
     });
   }
 
   @Override
-  public void updateSelectedCell() {
-    this.currentCell = (Cell)this.ws.getCellAt(ejf.getJTable().getSelectedRow(),
-            ejf.getJTable().getSelectedColumn());
+  public void updateSelectedCoord(int row, int col) {
+    this.currentCoord = new Coord(row, col);
   }
 
 }

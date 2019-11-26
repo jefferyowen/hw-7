@@ -65,7 +65,7 @@ public class ExcelJFrame extends JFrame implements View {
    * Constructor for Graphical view that is blank and set to a default size.
    */
   public ExcelJFrame() {
-    this.ws = new ReadOnlyTextual(new WorkSheetBasic(30, 10));
+    this.ws = new ReadOnlyTextual(new WorkSheetBasic(10, 10));
 
     this.f = new JFrame();
     this.f.setTitle("Excel Spreadsheet");
@@ -143,6 +143,7 @@ public class ExcelJFrame extends JFrame implements View {
         String[] s = new String[dtm.getColumnCount()];
         dtm.addRow(s);
         this.freezeRows(sp);
+
       }
     });
 

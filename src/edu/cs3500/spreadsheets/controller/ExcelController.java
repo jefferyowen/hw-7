@@ -20,22 +20,23 @@ import edu.cs3500.spreadsheets.view.View;
 public class ExcelController implements Features {
   private WorkSheet model;
   private EditView view;
-  private Cell currenCell;
+  private Coord currentCoord;
 
   public ExcelController(WorkSheet m, EditView v) {
     this.model = m;
     this.view = v;
     this.view.addFeatures(this); // This controller can handle both kinds of events directly
     this.view.render();
-    this.currenCell = (Cell) m.getCellAt(0, 0);
+    this.currentCoord = new Coord(1,1);
   }
 
   @Override
   public void setSelectedCell() {
-    System.out.println(this.currenCell.getCord());
-    Coord currentCord = view.getSelectedCell().getCord();
-    this.currenCell = (Cell) model.getCellAt(currentCord.row, currentCord.col);
-    System.out.println(this.currenCell.getCord());
+    System.out.println("Start: " + this.currentCoord);
+    Coord currentCord = view.getSelectedCoord();
+    System.out.println(currentCord.row + " " + currentCord.col);
+    this.currentCoord = new Coord(currentCord.row , currentCord.col);
+    System.out.println("End: " + this.currentCoord);
   }
 
   @Override
