@@ -1,12 +1,15 @@
 package edu.cs3500.spreadsheets.view;
 
-import java.awt.*;
+import java.awt.BorderLayout;
 import java.awt.event.KeyAdapter;
 import java.awt.event.KeyEvent;
 import java.awt.event.MouseAdapter;
 import java.awt.event.MouseEvent;
 
-import javax.swing.*;
+import javax.swing.JButton;
+import javax.swing.JFrame;
+import javax.swing.JPanel;
+import javax.swing.JTextField;
 
 import edu.cs3500.spreadsheets.controller.Features;
 import edu.cs3500.spreadsheets.model.Coord;

@@ -1,9 +1,17 @@
 package edu.cs3500.spreadsheets.view;
 
 
-import java.awt.*;
+import java.awt.Color;
+import java.awt.Component;
+import java.awt.Container;
+import java.awt.Dimension;
+import java.awt.Font;
 
-import javax.swing.*;
+import javax.swing.JFrame;
+import javax.swing.JPanel;
+import javax.swing.JScrollPane;
+import javax.swing.JTable;
+import javax.swing.JViewport;
 import javax.swing.table.DefaultTableCellRenderer;
 import javax.swing.table.DefaultTableModel;
 import javax.swing.table.TableColumn;
@@ -176,29 +184,29 @@ public class ExcelJFrame extends JFrame implements View {
     rowHeader.setPreferredScrollableViewportSize(new Dimension(45, 200));
     rowHeader.getColumnModel().getColumn(0).setCellRenderer(
             new DefaultTableCellRenderer() {
-              public Component getTableCellRendererComponent(JTable table, Object value,
+        public Component getTableCellRendererComponent(JTable table, Object value,
                                                              boolean isSelected,
                                                              boolean hasFocus,
                                                              int row, int column) {
 
-                super.getTableCellRendererComponent(table, value, isSelected, hasFocus, row,
+          super.getTableCellRendererComponent(table, value, isSelected, hasFocus, row,
                         column);
-                setText(value.toString());
-                String s = (String) value;
-                int i = Integer.parseInt(s);
-                if (i >= 1000) {
-                  setHorizontalAlignment(CENTER);
-                } else {
-                  setHorizontalAlignment(LEFT);
-                }
-                setHorizontalAlignment(CENTER);
-                setBackground(Color.LIGHT_GRAY);
-                setFont(getFont().deriveFont(Font.BOLD));
+          setText(value.toString());
+          String s = (String) value;
+          int i = Integer.parseInt(s);
+          if (i >= 1000) {
+            setHorizontalAlignment(CENTER);
+          } else {
+            setHorizontalAlignment(LEFT);
+          }
+            setHorizontalAlignment(CENTER);
+            setBackground(Color.LIGHT_GRAY);
+            setFont(getFont().deriveFont(Font.BOLD));
 
-                return this;
-              }
+            return this;
+          }
 
-            });
+        });
 
     scroller.setRowHeaderView(rowHeader);
 
