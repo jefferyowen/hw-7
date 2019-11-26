@@ -12,7 +12,8 @@ import edu.cs3500.spreadsheets.model.WorkSheet;
 import edu.cs3500.spreadsheets.model.WorkSheetBasic;
 
 /**
- * Graphical view for our Excel Spreadsheet.
+ * Graphical view for our Excel Spreadsheet. Puts spreadsheet into a grid view,
+ * able to see values in Coords.
  */
 public class ExcelJFrame extends JFrame implements View {
 

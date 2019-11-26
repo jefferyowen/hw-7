@@ -7,7 +7,8 @@ import javax.swing.table.DefaultTableModel;
 
 
 /**
- * Creates  a JTable for our specific specifications.
+ * Creates  a JTable for our specific specifications. The actual grid model of our worksheet.
+ * Contains all the values of the given worksheets, in the correct positions.
  */
 public class ExcelJTable extends JTable {
 

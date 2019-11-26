@@ -8,7 +8,8 @@ import edu.cs3500.spreadsheets.model.Coord;
 import edu.cs3500.spreadsheets.model.WorkSheet;
 
 /**
- * The textual view for the Worksheet.
+ * A textual view of the worksheet. Where all Coords are followed by the value in the
+ * corresponding Cell.
  */
 public class TextualView implements View {
   private ReadOnlyTextual textual;

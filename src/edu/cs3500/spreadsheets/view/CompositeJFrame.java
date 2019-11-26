@@ -13,6 +13,10 @@ import edu.cs3500.spreadsheets.controller.Features;
 import edu.cs3500.spreadsheets.model.Coord;
 import edu.cs3500.spreadsheets.model.WorkSheet;
 
+/**
+ * Adds ability of updating Cell values in the graphical view. Can clear changes, and
+ * revert back to original value. Also able to delete Cells.
+ */
 public class CompositeJFrame extends JFrame implements EditView {
 
   private ExcelJFrame ejf;
@@ -112,8 +116,13 @@ public class CompositeJFrame extends JFrame implements EditView {
   public void addFeatures(Features features) {
 
 
-    confirm.addActionListener(evt -> features.setCellContentsOfCell(this.getInputString()));
-
+    confirm.addActionListener(evt -> {
+      try {
+        features.setCellContentsOfCell(this.getInputString());
+      } catch (IllegalArgumentException e) {
+        System.out.print("Invalid input. Strings must be contained in quotations!");
+      }
+    });
 
     clear.addActionListener(evt -> features.resetTextbar());
 
