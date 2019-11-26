@@ -6,6 +6,7 @@ import java.awt.event.FocusListener;
 import java.awt.event.KeyListener;
 import java.awt.event.MouseAdapter;
 import java.awt.event.MouseEvent;
+import java.awt.event.MouseListener;
 
 import javax.swing.*;
 import javax.swing.table.DefaultTableModel;
@@ -132,6 +133,15 @@ public class CompositeJFrame extends JFrame implements EditView {
        features.setSelectedCell();
       }
     });
+  }
+
+  @Override
+  public void removeFeatures(Features features) {
+
+    MouseListener[] mListener = this.ejf.getJTable().getMouseListeners();
+    for (MouseListener ml : mListener) {
+      this.ejf.getJTable().removeMouseListener(ml);
+    }
   }
 
   @Override

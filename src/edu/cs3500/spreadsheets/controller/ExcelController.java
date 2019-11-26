@@ -49,9 +49,16 @@ public class ExcelController implements Features {
 
   @Override
   public void clearCell() {
+    System.out.println("fuck it we ball");
+
     this.view.clearInputString();
+
+    this.view.removeFeatures(this);
+
     this.model.setCell(this.currentCoord.row, this.currentCoord.col,
             new CellComponentBlank());
+
     this.view.updateModel(this.model);
+    this.view.addFeatures(this);
   }
 }
