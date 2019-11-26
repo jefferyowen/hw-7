@@ -1,24 +1,17 @@
 package edu.cs3500.spreadsheets.view;
 
 import java.awt.*;
-import java.awt.event.ActionListener;
-import java.awt.event.FocusListener;
 import java.awt.event.KeyAdapter;
 import java.awt.event.KeyEvent;
-import java.awt.event.KeyListener;
 import java.awt.event.MouseAdapter;
 import java.awt.event.MouseEvent;
 import java.awt.event.MouseListener;
 
 import javax.swing.*;
-import javax.swing.table.DefaultTableModel;
 
 import edu.cs3500.spreadsheets.controller.Features;
-import edu.cs3500.spreadsheets.model.Cell;
 import edu.cs3500.spreadsheets.model.Coord;
-import edu.cs3500.spreadsheets.model.SimpleWorkSheetBuilder;
 import edu.cs3500.spreadsheets.model.WorkSheet;
-import edu.cs3500.spreadsheets.model.WorkSheetBasic;
 
 public class CompositeJFrame extends JFrame implements EditView {
 
@@ -78,7 +71,7 @@ public class CompositeJFrame extends JFrame implements EditView {
     this.f.setSize(800, 501);
     this.f.pack();
     this.f.setResizable(false);
-    this.currentCoord = new Coord(1,1);
+    this.currentCoord = new Coord(1, 1);
   }
 
 
@@ -93,7 +86,7 @@ public class CompositeJFrame extends JFrame implements EditView {
   }
 
   @Override
-  public void setInputString(String input){
+  public void setInputString(String input) {
     this.clearInputString();
     this.jtf.setText(input);
   }
@@ -127,7 +120,7 @@ public class CompositeJFrame extends JFrame implements EditView {
     this.ejf.getJTable().addKeyListener(new KeyAdapter() {
       @Override
       public void keyTyped(KeyEvent e) {
-        if(e.getKeyChar() == KeyEvent.VK_DELETE) {
+        if (e.getKeyChar() == KeyEvent.VK_DELETE) {
           features.clearCell();
         }
       }
@@ -138,7 +131,7 @@ public class CompositeJFrame extends JFrame implements EditView {
       public void mouseClicked(MouseEvent e) {
         updateSelectedCoord(ejf.getJTable().getSelectedRow() + 1,
                 ejf.getJTable().getSelectedColumn() + 1);
-       features.setSelectedCell();
+        features.setSelectedCell();
       }
     });
   }

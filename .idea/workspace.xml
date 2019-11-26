@@ -1,11 +1,32 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="ArtifactsWorkspaceSettings">
+    <artifacts-to-build>
+      <artifact name="hw7:jar" />
+    </artifacts-to-build>
+  </component>
   <component name="ChangeListManager">
     <list default="true" id="75e67612-0d55-4a0a-bac3-9174dd4ce53f" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/hw7/edu/cs3500/spreadsheets/controller/ExcelController.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/hw7/edu/cs3500/spreadsheets/controller/ExcelController.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/hw7/edu/cs3500/spreadsheets/view/CompositeJFrame$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/hw7/edu/cs3500/spreadsheets/view/CompositeJFrame$1.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/hw7/edu/cs3500/spreadsheets/view/CompositeJFrame.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/hw7/edu/cs3500/spreadsheets/view/CompositeJFrame.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/hw7/edu/cs3500/spreadsheets/view/EditView.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/hw7/edu/cs3500/spreadsheets/view/EditView.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/hw7/edu/cs3500/spreadsheets/view/ExcelJFrame$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/hw7/edu/cs3500/spreadsheets/view/ExcelJFrame$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/hw7/edu/cs3500/spreadsheets/view/ExcelJFrame.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/hw7/edu/cs3500/spreadsheets/view/ExcelJFrame.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/hw7/edu/cs3500/spreadsheets/view/ExcelJTable.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/hw7/edu/cs3500/spreadsheets/view/ExcelJTable.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/hw7/edu/cs3500/spreadsheets/view/ReadOnlyTextual.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/hw7/edu/cs3500/spreadsheets/view/ReadOnlyTextual.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/hw7/edu/cs3500/spreadsheets/view/TextualView.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/hw7/edu/cs3500/spreadsheets/view/TextualView.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/edu/cs3500/spreadsheets/controller/ExcelController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/edu/cs3500/spreadsheets/controller/ExcelController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/edu/cs3500/spreadsheets/controller/Features.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/edu/cs3500/spreadsheets/controller/Features.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/edu/cs3500/spreadsheets/view/CompositeJFrame.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/edu/cs3500/spreadsheets/view/CompositeJFrame.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/edu/cs3500/spreadsheets/view/EditView.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/edu/cs3500/spreadsheets/view/EditView.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/edu/cs3500/spreadsheets/view/ExcelJFrame.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/edu/cs3500/spreadsheets/view/ExcelJFrame.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/edu/cs3500/spreadsheets/view/ExcelJTable.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/edu/cs3500/spreadsheets/view/ExcelJTable.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/edu/cs3500/spreadsheets/view/ReadOnlyTextual.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/edu/cs3500/spreadsheets/view/ReadOnlyTextual.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/edu/cs3500/spreadsheets/view/ReadOnlyView.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/edu/cs3500/spreadsheets/view/ReadOnlyView.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/edu/cs3500/spreadsheets/view/TextualView.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/edu/cs3500/spreadsheets/view/TextualView.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/Hw6Checks.java" beforeDir="false" afterPath="$PROJECT_DIR$/test/Hw6Checks.java" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -32,8 +53,8 @@
     <property name="Repository.Attach.Sources" value="false" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
-    <property name="project.structure.last.edited" value="Project" />
-    <property name="project.structure.proportion" value="0.0" />
+    <property name="project.structure.last.edited" value="Artifacts" />
+    <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
     <property name="settings.editor.selected.configurable" value="preferences.sourceCode.Java" />
   </component>
@@ -49,7 +70,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Application.edit ss1">
+  <component name="RunManager" selected="Application.edit ss2">
     <configuration name="edit blank" type="Application" factoryName="Application">
       <option name="MAIN_CLASS_NAME" value="edu.cs3500.spreadsheets.BeyondGood" />
       <module name="hw7" />
@@ -63,6 +84,15 @@
       <option name="MAIN_CLASS_NAME" value="edu.cs3500.spreadsheets.BeyondGood" />
       <module name="hw7" />
       <option name="PROGRAM_PARAMETERS" value="-in spreadsheet1.txt -edit" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/resources" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="edit ss2" type="Application" factoryName="Application">
+      <option name="MAIN_CLASS_NAME" value="edu.cs3500.spreadsheets.BeyondGood" />
+      <module name="hw7" />
+      <option name="PROGRAM_PARAMETERS" value="-in spreadsheet2.txt -edit" />
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/resources" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -97,6 +127,7 @@
     <list>
       <item itemvalue="Application.edit blank" />
       <item itemvalue="Application.edit ss1" />
+      <item itemvalue="Application.edit ss2" />
       <item itemvalue="Application.gui ss1" />
       <item itemvalue="JUnit.All in hw7" />
       <item itemvalue="JUnit.Hw5Checks" />

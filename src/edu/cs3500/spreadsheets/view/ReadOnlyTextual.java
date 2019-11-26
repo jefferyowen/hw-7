@@ -6,7 +6,6 @@ import edu.cs3500.spreadsheets.model.Cell;
 import edu.cs3500.spreadsheets.model.CellComponent;
 import edu.cs3500.spreadsheets.model.Coord;
 import edu.cs3500.spreadsheets.model.WorkSheet;
-import edu.cs3500.spreadsheets.model.WorkSheetBasic;
 
 /**
  * Implementation for a ReadOnly version of a Worksheet.

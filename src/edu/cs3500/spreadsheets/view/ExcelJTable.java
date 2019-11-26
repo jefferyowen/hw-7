@@ -1,9 +1,8 @@
 package edu.cs3500.spreadsheets.view;
 
-import java.awt.Color;
+import java.awt.*;
 
-
-import javax.swing.JTable;
+import javax.swing.*;
 import javax.swing.table.DefaultTableModel;
 
 

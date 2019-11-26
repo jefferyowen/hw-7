@@ -1,8 +1,5 @@
 package edu.cs3500.spreadsheets.view;
 
-import java.awt.event.ActionListener;
-import java.awt.event.FocusListener;
-import java.awt.event.KeyListener;
 import java.io.PrintWriter;
 import java.util.ArrayList;
 
@@ -44,7 +41,6 @@ public class TextualView implements View {
     }
     printWriter.close();
   }
-
 
 
 }

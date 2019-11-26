@@ -1,23 +1,14 @@
 package edu.cs3500.spreadsheets.controller;
 
-import java.awt.event.ActionEvent;
-import java.awt.event.ActionListener;
-import java.awt.event.FocusEvent;
-import java.awt.event.FocusListener;
-import java.awt.event.KeyEvent;
-import java.awt.event.KeyListener;
-
 import edu.cs3500.spreadsheets.model.Cell;
 import edu.cs3500.spreadsheets.model.CellComponent;
 import edu.cs3500.spreadsheets.model.Coord;
 import edu.cs3500.spreadsheets.model.SexpVisitorCellComponent;
 import edu.cs3500.spreadsheets.model.WorkSheet;
-import edu.cs3500.spreadsheets.model.WorksheetReader;
 import edu.cs3500.spreadsheets.model.cells.CellComponentBlank;
 import edu.cs3500.spreadsheets.sexp.Parser;
 import edu.cs3500.spreadsheets.sexp.Sexp;
 import edu.cs3500.spreadsheets.view.EditView;
-import edu.cs3500.spreadsheets.view.View;
 
 public class ExcelController implements Features {
   private WorkSheet model;
@@ -46,7 +37,7 @@ public class ExcelController implements Features {
 
   @Override
   public void setCellContentsOfCell(String contents) {
-    if(contents.contains("=")) {
+    if (contents.contains("=")) {
       contents = contents.substring(1);
     }
     Sexp toAddSexp = Parser.parse(contents);

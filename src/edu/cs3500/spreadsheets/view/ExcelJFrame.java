@@ -2,18 +2,12 @@ package edu.cs3500.spreadsheets.view;
 
 
 import java.awt.*;
-import java.awt.event.ActionListener;
-import java.awt.event.FocusListener;
-import java.awt.event.KeyListener;
-import java.awt.event.MouseAdapter;
-import java.awt.event.MouseEvent;
 
 import javax.swing.*;
 import javax.swing.table.DefaultTableCellRenderer;
 import javax.swing.table.DefaultTableModel;
 import javax.swing.table.TableColumn;
 
-import edu.cs3500.spreadsheets.model.Cell;
 import edu.cs3500.spreadsheets.model.WorkSheet;
 import edu.cs3500.spreadsheets.model.WorkSheetBasic;
 
@@ -180,30 +174,30 @@ public class ExcelJFrame extends JFrame implements View {
     rowHeader.getColumnModel().getColumn(0).setMaxWidth(50);
     rowHeader.setPreferredScrollableViewportSize(new Dimension(45, 200));
     rowHeader.getColumnModel().getColumn(0).setCellRenderer(
-          new DefaultTableCellRenderer() {
-            public Component getTableCellRendererComponent(JTable table, Object value,
-                                                       boolean isSelected,
-                                                       boolean hasFocus,
-                                                       int row, int column) {
+            new DefaultTableCellRenderer() {
+              public Component getTableCellRendererComponent(JTable table, Object value,
+                                                             boolean isSelected,
+                                                             boolean hasFocus,
+                                                             int row, int column) {
 
-            super.getTableCellRendererComponent(table, value, isSelected, hasFocus, row,
-                    column);
-            setText(value.toString());
-            String s = (String) value;
-            int i = Integer.parseInt(s);
-            if (i >= 1000) {
-              setHorizontalAlignment(CENTER);
-            } else {
-              setHorizontalAlignment(LEFT);
-            }
-            setHorizontalAlignment(CENTER);
-            setBackground(Color.LIGHT_GRAY);
-            setFont(getFont().deriveFont(Font.BOLD));
+                super.getTableCellRendererComponent(table, value, isSelected, hasFocus, row,
+                        column);
+                setText(value.toString());
+                String s = (String) value;
+                int i = Integer.parseInt(s);
+                if (i >= 1000) {
+                  setHorizontalAlignment(CENTER);
+                } else {
+                  setHorizontalAlignment(LEFT);
+                }
+                setHorizontalAlignment(CENTER);
+                setBackground(Color.LIGHT_GRAY);
+                setFont(getFont().deriveFont(Font.BOLD));
 
-            return this;
-          }
+                return this;
+              }
 
-        });
+            });
 
     scroller.setRowHeaderView(rowHeader);
 
