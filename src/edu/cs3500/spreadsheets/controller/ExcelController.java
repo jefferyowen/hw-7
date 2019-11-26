@@ -28,16 +28,16 @@ public class ExcelController implements Features {
     this.view = v;
     this.view.addFeatures(this); // This controller can handle both kinds of events directly
     this.view.render();
-    this.currentCoord = new Coord(1,1);
+    this.currentCoord = new Coord(1, 1);
   }
 
   @Override
   public void setSelectedCell() {
     Coord currentCord = view.getSelectedCoord();
-    this.currentCoord = new Coord(currentCord.row , currentCord.col);
+    this.currentCoord = new Coord(currentCord.row, currentCord.col);
 
     Cell c = (Cell) this.model.getCellAt(this.currentCoord.row - 1,
-            this.currentCoord.col- 1);
+            this.currentCoord.col - 1);
 
     this.view.setInputString(c.getCellContent().toString());
 
@@ -51,8 +51,8 @@ public class ExcelController implements Features {
   public void clearCell() {
 
     this.view.clearInputString();
-
-    this.model.setCell(this.currentCoord.row, this.currentCoord.col, new CellComponentBlank());
-
+    this.model.setCell(this.currentCoord.row, this.currentCoord.col,
+            new CellComponentBlank());
+    this.view.updateModel(this.model);
   }
 }

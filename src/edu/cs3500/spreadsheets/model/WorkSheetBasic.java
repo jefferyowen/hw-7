@@ -89,9 +89,11 @@ public class WorkSheetBasic implements WorkSheet<Cell> {
   @Override
   public Cell getCellAt(int row, int col) {
     if (row >= this.spreadsheet.get(col).size() || row < 0) {
-      throw new IllegalArgumentException("Invalid position.");
+      this.addRow(col, row - this.getNumRows() + 1);
+      return this.spreadsheet.get(col).get(row);
     } else if (col >= this.spreadsheet.size() || col < 0) {
-      throw new IllegalArgumentException("Invalid position.");
+      this.addCol(col - this.getNumCols() + 1);
+      return this.spreadsheet.get(col).get(row);
     } else {
       return this.spreadsheet.get(col).get(row);
     }

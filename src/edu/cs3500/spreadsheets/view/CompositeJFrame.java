@@ -101,6 +101,11 @@ public class CompositeJFrame extends JFrame implements EditView {
   }
 
   @Override
+  public void updateModel(WorkSheet ws) {
+    this.ws = new ReadOnlyTextual(ws);
+  }
+
+  @Override
   public void clearInputString() {
     this.jtf.setText("");
   }
@@ -135,5 +140,6 @@ public class CompositeJFrame extends JFrame implements EditView {
   public void updateSelectedCoord(int row, int col) {
     this.currentCoord = new Coord(row, col);
   }
+
 
 }
