@@ -4,4 +4,5 @@ public interface Features {
   public void setSelectedCell();
   public void setCellContentsOfCell(String contents);
   public void clearCell();
+  public void resetTextbar();
 }

@@ -10,10 +10,12 @@ import java.awt.event.KeyListener;
 import edu.cs3500.spreadsheets.model.Cell;
 import edu.cs3500.spreadsheets.model.CellComponent;
 import edu.cs3500.spreadsheets.model.Coord;
+import edu.cs3500.spreadsheets.model.SexpVisitorCellComponent;
 import edu.cs3500.spreadsheets.model.WorkSheet;
 import edu.cs3500.spreadsheets.model.WorksheetReader;
 import edu.cs3500.spreadsheets.model.cells.CellComponentBlank;
 import edu.cs3500.spreadsheets.sexp.Parser;
+import edu.cs3500.spreadsheets.sexp.Sexp;
 import edu.cs3500.spreadsheets.view.EditView;
 import edu.cs3500.spreadsheets.view.View;
 
@@ -44,13 +46,26 @@ public class ExcelController implements Features {
 
   @Override
   public void setCellContentsOfCell(String contents) {
+    Sexp toAddSexp = Parser.parse(contents);
+    CellComponent toAdd =
+            toAddSexp.accept(new SexpVisitorCellComponent(this.model,
+                    this.currentCoord.col - 1, this.currentCoord.row - 1));
+
+    this.model.setCell(this.currentCoord.row - 1, this.currentCoord.col - 1,
+            toAdd);
+    this.view.updateModel(this.model);
   }
 
   @Override
   public void clearCell() {
     this.view.clearInputString();
-    this.model.setCell(this.currentCoord.row, this.currentCoord.col,
+    this.model.setCell(this.currentCoord.row - 1, this.currentCoord.col - 1,
             new CellComponentBlank());
     this.view.updateModel(this.model);
+  }
+
+  @Override
+  public void resetTextbar() {
+
   }
 }

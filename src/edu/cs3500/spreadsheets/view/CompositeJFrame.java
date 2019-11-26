@@ -42,7 +42,6 @@ public class CompositeJFrame extends JFrame implements EditView {
    * Constructor for Editable Graphical view that is blank and set to a default size.
    */
   public CompositeJFrame() {
-
     this.ejf = new ExcelJFrame();
     setUp();
   }
@@ -98,7 +97,8 @@ public class CompositeJFrame extends JFrame implements EditView {
 
   @Override
   public void updateModel(WorkSheet ws) {
-    this.ejf = new ExcelJFrame(ws);
+    this.ejf.updateTable(ws);
+
   }
 
   @Override
@@ -116,7 +116,7 @@ public class CompositeJFrame extends JFrame implements EditView {
   public void addFeatures(Features features) {
 
 
-    confirm.addActionListener(evt -> features.setCellContentsOfCell(jtf.toString()));
+    confirm.addActionListener(evt -> features.setCellContentsOfCell(this.getInputString()));
 
 
     clear.addActionListener(evt -> features.clearCell());
@@ -125,8 +125,7 @@ public class CompositeJFrame extends JFrame implements EditView {
     this.ejf.getJTable().addMouseListener(new MouseAdapter() {
       @Override
       public void mouseClicked(MouseEvent e) {
-        System.out.println(ejf.getJTable().getSelectedRow() + " " +
-                ejf.getJTable().getSelectedColumn());
+        System.out.println(ejf.getJTable().getSelectedRow() + 1 + " " + (ejf.getJTable().getSelectedColumn()+ 1));
         updateSelectedCoord(ejf.getJTable().getSelectedRow() + 1,
                 ejf.getJTable().getSelectedColumn() + 1);
        features.setSelectedCell();
@@ -138,6 +137,4 @@ public class CompositeJFrame extends JFrame implements EditView {
   public void updateSelectedCoord(int row, int col) {
     this.currentCoord = new Coord(row, col);
   }
-
-
 }
