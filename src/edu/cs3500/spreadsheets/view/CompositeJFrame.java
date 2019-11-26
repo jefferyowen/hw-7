@@ -19,11 +19,9 @@ import edu.cs3500.spreadsheets.model.WorkSheetBasic;
 
 public class CompositeJFrame extends JFrame implements EditView {
 
-  private JScrollPane sp;
   private ExcelJFrame ejf;
   private JFrame f;
   private JPanel p;
-  private ReadOnlyView ws;
   private JButton confirm;
   private JButton clear;
   private JTextField jtf;
@@ -37,7 +35,6 @@ public class CompositeJFrame extends JFrame implements EditView {
    */
   public CompositeJFrame(WorkSheet ws) {
     this.ejf = new ExcelJFrame(ws);
-    this.ws = new ReadOnlyTextual(ws);
     setUp();
   }
 
@@ -47,7 +44,6 @@ public class CompositeJFrame extends JFrame implements EditView {
   public CompositeJFrame() {
 
     this.ejf = new ExcelJFrame();
-    this.ws = new ReadOnlyTextual(new SimpleWorkSheetBuilder().createWorksheet());
     setUp();
   }
 
@@ -102,8 +98,7 @@ public class CompositeJFrame extends JFrame implements EditView {
 
   @Override
   public void updateModel(WorkSheet ws) {
-    this.ws = new ReadOnlyTextual(ws);
-
+    this.ejf = new ExcelJFrame(ws);
   }
 
   @Override
@@ -127,9 +122,11 @@ public class CompositeJFrame extends JFrame implements EditView {
     clear.addActionListener(evt -> features.clearCell());
 
 
-    ejf.getJTable().addMouseListener(new MouseAdapter() {
+    this.ejf.getJTable().addMouseListener(new MouseAdapter() {
       @Override
       public void mouseClicked(MouseEvent e) {
+        System.out.println(ejf.getJTable().getSelectedRow() + " " +
+                ejf.getJTable().getSelectedColumn());
         updateSelectedCoord(ejf.getJTable().getSelectedRow() + 1,
                 ejf.getJTable().getSelectedColumn() + 1);
        features.setSelectedCell();

@@ -28,7 +28,6 @@ public class ExcelJFrame extends JFrame implements View {
   private ExcelJTable j;
   private DefaultTableModel dtm;
   private ReadOnlyTextual ws;
-  private Cell currentCell;
 
   /**
    * Constructor for Graphical view given Worksheet.
@@ -119,7 +118,6 @@ public class ExcelJFrame extends JFrame implements View {
     f.setResizable(false);
     f.setFocusable(true);
     f.pack();
-    this.currentCell = ws.getCellAt(0,0);
   }
 
   /**
