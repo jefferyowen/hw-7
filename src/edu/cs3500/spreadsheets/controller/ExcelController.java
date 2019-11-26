@@ -14,6 +14,7 @@ import edu.cs3500.spreadsheets.model.WorkSheet;
 import edu.cs3500.spreadsheets.model.WorksheetReader;
 import edu.cs3500.spreadsheets.model.cells.CellComponentBlank;
 import edu.cs3500.spreadsheets.sexp.Parser;
+import edu.cs3500.spreadsheets.view.CompositeJFrame;
 import edu.cs3500.spreadsheets.view.EditView;
 import edu.cs3500.spreadsheets.view.View;
 
