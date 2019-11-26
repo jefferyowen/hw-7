@@ -3,6 +3,8 @@ package edu.cs3500.spreadsheets.view;
 import java.awt.*;
 import java.awt.event.ActionListener;
 import java.awt.event.FocusListener;
+import java.awt.event.KeyAdapter;
+import java.awt.event.KeyEvent;
 import java.awt.event.KeyListener;
 import java.awt.event.MouseAdapter;
 import java.awt.event.MouseEvent;
@@ -121,6 +123,15 @@ public class CompositeJFrame extends JFrame implements EditView {
 
     clear.addActionListener(evt -> features.resetTextbar());
 
+    this.ejf.getJTable().addKeyListener(new KeyAdapter() {
+      @Override
+      public void keyTyped(KeyEvent e) {
+        if(e.getKeyChar() == KeyEvent.VK_DELETE) {
+          System.out.println("git");
+          features.clearCell();
+        }
+      }
+    });
 
     this.ejf.getJTable().addMouseListener(new MouseAdapter() {
       @Override
