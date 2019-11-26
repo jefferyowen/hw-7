@@ -4,6 +4,7 @@ import java.awt.event.ActionListener;
 import java.awt.event.FocusListener;
 
 import edu.cs3500.spreadsheets.controller.Features;
+import edu.cs3500.spreadsheets.model.Cell;
 
 public interface EditView extends View {
 
@@ -20,8 +21,9 @@ public interface EditView extends View {
 
   public void clearInputString();
 
-  public void getSelectedCell();
+  public Cell getSelectedCell();
 
   public void addFeatures(Features features);
 
+  public void updateSelectedCell();
 }

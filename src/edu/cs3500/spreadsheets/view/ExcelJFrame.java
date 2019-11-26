@@ -11,6 +11,7 @@ import javax.swing.table.DefaultTableCellRenderer;
 import javax.swing.table.DefaultTableModel;
 import javax.swing.table.TableColumn;
 
+import edu.cs3500.spreadsheets.model.Cell;
 import edu.cs3500.spreadsheets.model.WorkSheet;
 import edu.cs3500.spreadsheets.model.WorkSheetBasic;
 
@@ -25,6 +26,7 @@ public class ExcelJFrame extends JFrame implements View {
   private ExcelJTable j;
   private DefaultTableModel dtm;
   private ReadOnlyTextual ws;
+  private Cell currentCell;
 
   /**
    * Constructor for Graphical view given Worksheet.
@@ -79,10 +81,6 @@ public class ExcelJFrame extends JFrame implements View {
     readData();
     setUp();
 
-  }
-
-  public void getSelectedCell() {
-    System.out.println(this.j.getSelectedRow() + "" + this.j.getSelectedColumn());
   }
 
   @Override

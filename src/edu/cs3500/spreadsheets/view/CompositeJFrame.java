@@ -9,18 +9,18 @@ import javax.swing.*;
 import javax.swing.table.DefaultTableModel;
 
 import edu.cs3500.spreadsheets.controller.Features;
+import edu.cs3500.spreadsheets.model.Cell;
+import edu.cs3500.spreadsheets.model.SimpleWorkSheetBuilder;
 import edu.cs3500.spreadsheets.model.WorkSheet;
 import edu.cs3500.spreadsheets.model.WorkSheetBasic;
 
 public class CompositeJFrame extends JFrame implements EditView {
 
   private JScrollPane sp;
-  public ExcelJFrame ejf;
+  private ExcelJFrame ejf;
   private JFrame f;
   private JPanel p;
-  private ExcelJTable j;
-  private DefaultTableModel dtm;
-  private ReadOnlyTextual ws;
+  private ReadOnlyView ws;
   private JButton confirm;
   private JButton clear;
   private JTextField jtf;
@@ -32,8 +32,8 @@ public class CompositeJFrame extends JFrame implements EditView {
    * @param ws the Worksheet to be represented by the editable graphical view.
    */
   public CompositeJFrame(WorkSheet ws) {
-
     this.ejf = new ExcelJFrame(ws);
+    this.ws = new ReadOnlyTextual(ws);
     setUp();
   }
 
@@ -43,6 +43,7 @@ public class CompositeJFrame extends JFrame implements EditView {
   public CompositeJFrame() {
 
     this.ejf = new ExcelJFrame();
+    this.ws = new ReadOnlyTextual(new SimpleWorkSheetBuilder().createWorksheet());
     setUp();
   }
 
@@ -58,12 +59,12 @@ public class CompositeJFrame extends JFrame implements EditView {
     this.confirm = new JButton("Confirm");
     this.confirm.setActionCommand("Confirm Button");
     this.clear = new JButton("Clear");
-    this.cancel.setActionCommand("Cancel Button");
+    this.clear.setActionCommand("Cancel Button");
 
     JPanel input = new JPanel();
     input.add(jtf);
     input.add(confirm);
-    input.add(cancel);
+    input.add(clear);
     this.worksheet = new JPanel();
     this.worksheet.add(ejf.getContentPane());
     this.worksheet.setFocusable(true);
@@ -94,15 +95,21 @@ public class CompositeJFrame extends JFrame implements EditView {
   }
 
   @Override
-  public void getSelectedCell() {
-    this.ejf.getSelectedCell();
+  public Cell getSelectedCell() {
+      return null;
   }
+
 
   @Override
   public void addFeatures(Features features) {
     confirm.addActionListener(evt -> features.setCellContentsOfCell(jtf.toString()));
     clear.addActionListener(evt -> features.clearToolbar());
-    
+
+  }
+
+  @Override
+  public void updateSelectedCell() {
+
   }
 
 }
