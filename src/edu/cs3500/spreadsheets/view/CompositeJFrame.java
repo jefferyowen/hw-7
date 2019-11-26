@@ -103,6 +103,7 @@ public class CompositeJFrame extends JFrame implements EditView {
   @Override
   public void updateModel(WorkSheet ws) {
     this.ws = new ReadOnlyTextual(ws);
+
   }
 
   @Override
