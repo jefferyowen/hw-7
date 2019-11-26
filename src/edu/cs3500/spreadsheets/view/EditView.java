@@ -24,4 +24,6 @@ public interface EditView extends View {
   public void addFeatures(Features features);
 
   public void updateSelectedCoord(int row, int col);
+
+  public void setInputString(String contents);
 }

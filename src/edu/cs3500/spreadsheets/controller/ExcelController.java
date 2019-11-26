@@ -32,11 +32,14 @@ public class ExcelController implements Features {
 
   @Override
   public void setSelectedCell() {
-    System.out.println("Start: " + this.currentCoord);
     Coord currentCord = view.getSelectedCoord();
-    System.out.println(currentCord.row + " " + currentCord.col);
     this.currentCoord = new Coord(currentCord.row , currentCord.col);
-    System.out.println("End: " + this.currentCoord);
+
+    Cell c = (Cell) this.model.getCellAt(this.currentCoord.row - 1,
+            this.currentCoord.col- 1);
+
+    this.view.setInputString(c.getCellContent().toString());
+
   }
 
   @Override

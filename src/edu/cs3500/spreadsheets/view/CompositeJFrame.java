@@ -95,6 +95,12 @@ public class CompositeJFrame extends JFrame implements EditView {
   }
 
   @Override
+  public void setInputString(String input){
+    this.clearInputString();
+    this.jtf.setText(input);
+  }
+
+  @Override
   public void clearInputString() {
     this.jtf.setText("");
   }
