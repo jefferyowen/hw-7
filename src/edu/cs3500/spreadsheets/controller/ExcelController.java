@@ -46,10 +46,13 @@ public class ExcelController implements Features {
 
   @Override
   public void setCellContentsOfCell(String contents) {
+    if(contents.contains("=")) {
+      contents = contents.substring(1);
+    }
     Sexp toAddSexp = Parser.parse(contents);
     CellComponent toAdd =
             toAddSexp.accept(new SexpVisitorCellComponent(this.model,
-                    this.currentCoord.col - 1, this.currentCoord.row - 1));
+                    this.currentCoord.col, this.currentCoord.row));
 
     this.model.setCell(this.currentCoord.row - 1, this.currentCoord.col - 1,
             toAdd);
@@ -66,6 +69,7 @@ public class ExcelController implements Features {
 
   @Override
   public void resetTextbar() {
-
+    this.view.setInputString(this.model.getStringOfCell(this.currentCoord.col - 1,
+            this.currentCoord.row - 1));
   }
 }
