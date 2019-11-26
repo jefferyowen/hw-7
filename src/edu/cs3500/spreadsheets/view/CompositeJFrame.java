@@ -4,6 +4,8 @@ import java.awt.*;
 import java.awt.event.ActionListener;
 import java.awt.event.FocusListener;
 import java.awt.event.KeyListener;
+import java.awt.event.MouseAdapter;
+import java.awt.event.MouseEvent;
 
 import javax.swing.*;
 import javax.swing.table.DefaultTableModel;
@@ -76,6 +78,15 @@ public class CompositeJFrame extends JFrame implements EditView {
     this.f.setSize(800, 501);
     this.f.pack();
     this.f.setResizable(false);
+    ejf.addMouseListener(new MouseAdapter() {
+      @Override
+      public void mouseClicked(MouseEvent e) {
+        System.out.println("REEEE");
+        int row = ejf.getX();
+        int row2 = ejf.getY();
+        System.out.println(row + " " + row2);
+      }
+    });
   }
 
 

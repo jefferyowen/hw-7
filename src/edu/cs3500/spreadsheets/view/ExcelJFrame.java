@@ -5,6 +5,8 @@ import java.awt.*;
 import java.awt.event.ActionListener;
 import java.awt.event.FocusListener;
 import java.awt.event.KeyListener;
+import java.awt.event.MouseAdapter;
+import java.awt.event.MouseEvent;
 
 import javax.swing.*;
 import javax.swing.table.DefaultTableCellRenderer;
@@ -85,7 +87,6 @@ public class ExcelJFrame extends JFrame implements View {
 
   @Override
   public void render() {
-
     f.setVisible(true);
   }
 
@@ -116,6 +117,7 @@ public class ExcelJFrame extends JFrame implements View {
     f.setResizable(false);
     f.setFocusable(true);
     f.pack();
+    this.currentCell = ws.getCellAt(0,0);
   }
 
   /**
@@ -127,9 +129,6 @@ public class ExcelJFrame extends JFrame implements View {
         this.dtm.setValueAt(ws.getCellAt(i, j).getCellContent().evaluate(), i, j);
       }
     }
-
-
-
   }
 
   /**

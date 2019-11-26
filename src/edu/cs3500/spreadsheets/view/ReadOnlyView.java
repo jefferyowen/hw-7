@@ -39,13 +39,6 @@ public interface ReadOnlyView<R> {
   public String getStringOfCell(int row, int col);
 
   /**
-   * Gets the state of the current spreadsheet.
-   *
-   * @return a spreadsheet in the for of an List of List of R.
-   */
-  public ArrayList<ArrayList<R>> getSpreadSheet();
-
-  /**
    * Gets the number of rows in the worksheet.
    *
    * @return the number of rows.
