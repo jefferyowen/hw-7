@@ -41,7 +41,6 @@ public class ExcelController implements Features {
 
   @Override
   public void setCellContentsOfCell(String contents) {
-    CellComponent cc = Parser.parse(contents);
   }
 
   @Override
