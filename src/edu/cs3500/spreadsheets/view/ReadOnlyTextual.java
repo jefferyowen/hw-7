@@ -4,12 +4,14 @@ import java.util.ArrayList;
 
 import edu.cs3500.spreadsheets.model.Cell;
 import edu.cs3500.spreadsheets.model.CellComponent;
+import edu.cs3500.spreadsheets.model.Coord;
 import edu.cs3500.spreadsheets.model.WorkSheet;
+import edu.cs3500.spreadsheets.model.WorkSheetBasic;
 
 /**
  * Implementation for a ReadOnly version of a Worksheet.
  */
-public class ReadOnlyTextual implements ReadOnlyView {
+public class ReadOnlyTextual implements ReadOnlyView<Cell> {
   private ArrayList<ArrayList<Cell>> spreadsheet;
 
   /**
@@ -37,11 +39,6 @@ public class ReadOnlyTextual implements ReadOnlyView {
   }
 
   @Override
-  public ArrayList<ArrayList<Cell>> getSpreadSheet() {
-    throw new IllegalArgumentException("Shouldn't be accessed as it's a read only file");
-  }
-
-  @Override
   public int getNumRows() {
     return this.spreadsheet.get(0).size(); // shouldn't do anything as this is the read only file.
   }
@@ -49,5 +46,11 @@ public class ReadOnlyTextual implements ReadOnlyView {
   @Override
   public int getNumCols() {
     return this.spreadsheet.size(); // shouldn't do anything as this is the read only file.
+  }
+
+  @Override
+  public void setCell(int row, int col, CellComponent value) {
+
+    this.spreadsheet.get(col).set(row, new Cell(value, new Coord(col + 1, row + 1)));
   }
 }

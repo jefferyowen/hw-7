@@ -4,27 +4,30 @@ import java.awt.*;
 import java.awt.event.ActionListener;
 import java.awt.event.FocusListener;
 import java.awt.event.KeyListener;
+import java.awt.event.MouseAdapter;
+import java.awt.event.MouseEvent;
 
 import javax.swing.*;
 import javax.swing.table.DefaultTableModel;
 
 import edu.cs3500.spreadsheets.controller.Features;
+import edu.cs3500.spreadsheets.model.Cell;
+import edu.cs3500.spreadsheets.model.SimpleWorkSheetBuilder;
 import edu.cs3500.spreadsheets.model.WorkSheet;
 import edu.cs3500.spreadsheets.model.WorkSheetBasic;
 
 public class CompositeJFrame extends JFrame implements EditView {
 
   private JScrollPane sp;
-  public ExcelJFrame ejf;
+  private ExcelJFrame ejf;
   private JFrame f;
   private JPanel p;
-  private ExcelJTable j;
-  private DefaultTableModel dtm;
-  private ReadOnlyTextual ws;
+  private ReadOnlyView ws;
   private JButton confirm;
   private JButton clear;
   private JTextField jtf;
   private JPanel worksheet;
+  private Cell currentCell;
 
   /**
    * Constructor for Editable Graphical view given Worksheet.
@@ -32,8 +35,8 @@ public class CompositeJFrame extends JFrame implements EditView {
    * @param ws the Worksheet to be represented by the editable graphical view.
    */
   public CompositeJFrame(WorkSheet ws) {
-
     this.ejf = new ExcelJFrame(ws);
+    this.ws = new ReadOnlyTextual(ws);
     setUp();
   }
 
@@ -43,6 +46,7 @@ public class CompositeJFrame extends JFrame implements EditView {
   public CompositeJFrame() {
 
     this.ejf = new ExcelJFrame();
+    this.ws = new ReadOnlyTextual(new SimpleWorkSheetBuilder().createWorksheet());
     setUp();
   }
 
@@ -75,6 +79,7 @@ public class CompositeJFrame extends JFrame implements EditView {
     this.f.setSize(800, 501);
     this.f.pack();
     this.f.setResizable(false);
+    this.currentCell = (Cell)ws.getCellAt(0,0);
   }
 
 
@@ -94,9 +99,10 @@ public class CompositeJFrame extends JFrame implements EditView {
   }
 
   @Override
-  public void getSelectedCell() {
-    this.ejf.getSelectedCell();
+  public Cell getSelectedCell() {
+      return this.currentCell;
   }
+
 
   @Override
   public void addFeatures(Features features) {
@@ -104,7 +110,19 @@ public class CompositeJFrame extends JFrame implements EditView {
 
 
     clear.addActionListener(evt -> features.clearToolbar());
-    
+    ejf.getJTable().addMouseListener(new MouseAdapter() {
+      @Override
+      public void mouseClicked(MouseEvent e) {
+       features.setSelectedCell();
+       updateSelectedCell();
+      }
+    });
+  }
+
+  @Override
+  public void updateSelectedCell() {
+    this.currentCell = (Cell)this.ws.getCellAt(ejf.getJTable().getSelectedRow(),
+            ejf.getJTable().getSelectedColumn());
   }
 
 }

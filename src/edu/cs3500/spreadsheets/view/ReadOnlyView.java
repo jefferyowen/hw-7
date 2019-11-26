@@ -3,6 +3,7 @@ package edu.cs3500.spreadsheets.view;
 import java.util.ArrayList;
 
 import edu.cs3500.spreadsheets.model.Cell;
+import edu.cs3500.spreadsheets.model.CellComponent;
 import edu.cs3500.spreadsheets.model.WorkSheet;
 
 /**
@@ -38,13 +39,6 @@ public interface ReadOnlyView<R> {
   public String getStringOfCell(int row, int col);
 
   /**
-   * Gets the state of the current spreadsheet.
-   *
-   * @return a spreadsheet in the for of an List of List of R.
-   */
-  public ArrayList<ArrayList<R>> getSpreadSheet();
-
-  /**
    * Gets the number of rows in the worksheet.
    *
    * @return the number of rows.
@@ -58,4 +52,12 @@ public interface ReadOnlyView<R> {
    */
   public int getNumCols();
 
+  /**
+   * Sets the value of a current Cell, to the CellComponent value passed.
+   *
+   * @param row   the row of the current Cell being updated.
+   * @param col   the column of the current Cell being updated.
+   * @param value the value that the Cell is being set to.
+   */
+  public void setCell(int row, int col, CellComponent value);
 }

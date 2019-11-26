@@ -5,12 +5,15 @@ import java.awt.*;
 import java.awt.event.ActionListener;
 import java.awt.event.FocusListener;
 import java.awt.event.KeyListener;
+import java.awt.event.MouseAdapter;
+import java.awt.event.MouseEvent;
 
 import javax.swing.*;
 import javax.swing.table.DefaultTableCellRenderer;
 import javax.swing.table.DefaultTableModel;
 import javax.swing.table.TableColumn;
 
+import edu.cs3500.spreadsheets.model.Cell;
 import edu.cs3500.spreadsheets.model.WorkSheet;
 import edu.cs3500.spreadsheets.model.WorkSheetBasic;
 
@@ -25,6 +28,7 @@ public class ExcelJFrame extends JFrame implements View {
   private ExcelJTable j;
   private DefaultTableModel dtm;
   private ReadOnlyTextual ws;
+  private Cell currentCell;
 
   /**
    * Constructor for Graphical view given Worksheet.
@@ -81,13 +85,8 @@ public class ExcelJFrame extends JFrame implements View {
 
   }
 
-  public void getSelectedCell() {
-    System.out.println(this.j.getSelectedRow() + "" + this.j.getSelectedColumn());
-  }
-
   @Override
   public void render() {
-
     f.setVisible(true);
   }
 
@@ -96,7 +95,9 @@ public class ExcelJFrame extends JFrame implements View {
     return this.f.getContentPane();
   }
 
-
+  public ExcelJTable getJTable() {
+    return this.j;
+  }
   /**
    * Reduces duplication of code in constructors.
    */
@@ -118,6 +119,7 @@ public class ExcelJFrame extends JFrame implements View {
     f.setResizable(false);
     f.setFocusable(true);
     f.pack();
+    this.currentCell = ws.getCellAt(0,0);
   }
 
   /**
@@ -129,9 +131,6 @@ public class ExcelJFrame extends JFrame implements View {
         this.dtm.setValueAt(ws.getCellAt(i, j).getCellContent().evaluate(), i, j);
       }
     }
-
-
-
   }
 
   /**
