@@ -27,6 +27,7 @@ public class CompositeJFrame extends JFrame implements EditView {
   private JButton clear;
   private JTextField jtf;
   private JPanel worksheet;
+  private Cell currentCell;
 
   /**
    * Constructor for Editable Graphical view given Worksheet.
@@ -78,15 +79,7 @@ public class CompositeJFrame extends JFrame implements EditView {
     this.f.setSize(800, 501);
     this.f.pack();
     this.f.setResizable(false);
-    ejf.addMouseListener(new MouseAdapter() {
-      @Override
-      public void mouseClicked(MouseEvent e) {
-        System.out.println("REEEE");
-        int row = ejf.getX();
-        int row2 = ejf.getY();
-        System.out.println(row + " " + row2);
-      }
-    });
+    this.currentCell = (Cell)ws.getCellAt(0,0);
   }
 
 
@@ -107,7 +100,7 @@ public class CompositeJFrame extends JFrame implements EditView {
 
   @Override
   public Cell getSelectedCell() {
-      return null;
+      return this.currentCell;
   }
 
 
@@ -115,12 +108,19 @@ public class CompositeJFrame extends JFrame implements EditView {
   public void addFeatures(Features features) {
     confirm.addActionListener(evt -> features.setCellContentsOfCell(jtf.toString()));
     clear.addActionListener(evt -> features.clearToolbar());
-
+    ejf.getJTable().addMouseListener(new MouseAdapter() {
+      @Override
+      public void mouseClicked(MouseEvent e) {
+       features.setSelectedCell();
+       updateSelectedCell();
+      }
+    });
   }
 
   @Override
   public void updateSelectedCell() {
-
+    this.currentCell = (Cell)this.ws.getCellAt(ejf.getJTable().getSelectedRow(),
+            ejf.getJTable().getSelectedColumn());
   }
 
 }

@@ -95,7 +95,9 @@ public class ExcelJFrame extends JFrame implements View {
     return this.f.getContentPane();
   }
 
-
+  public ExcelJTable getJTable() {
+    return this.j;
+  }
   /**
    * Reduces duplication of code in constructors.
    */
