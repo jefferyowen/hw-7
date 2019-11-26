@@ -54,7 +54,7 @@ public class BeyondGood {
       } else if (args[2].equals("-gui")) {
         new ExcelJFrame(toReturn).render();
       } else if (args[2].equals("-edit")) {
-        new ExcelController(toReturn, new CompositeJFrame());
+        new ExcelController(toReturn, new CompositeJFrame(toReturn));
 
       }
     } else if (args[0].equals("-gui")) {
