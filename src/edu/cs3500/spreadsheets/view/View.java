@@ -1,7 +1,7 @@
 package edu.cs3500.spreadsheets.view;
 
 /**
- * Interface of a view for a Worksheet.
+ * Interface of a view for a Worksheet of cells.
  */
 public interface View {
   /**
