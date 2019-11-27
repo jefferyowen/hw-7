@@ -6,10 +6,7 @@ import java.awt.event.KeyEvent;
 import java.awt.event.MouseAdapter;
 import java.awt.event.MouseEvent;
 
-import javax.swing.JButton;
-import javax.swing.JFrame;
-import javax.swing.JPanel;
-import javax.swing.JTextField;
+import javax.swing.*;
 
 import edu.cs3500.spreadsheets.controller.Features;
 import edu.cs3500.spreadsheets.model.Coord;
@@ -29,7 +26,7 @@ public class CompositeJFrame extends JFrame implements EditView {
   private JTextField jtf;
   private JPanel worksheet;
   private Coord currentCoord;
-
+  private JTextArea instructionsPane;
   /**
    * Constructor for Editable Graphical view given Worksheet.
    *
@@ -73,9 +70,17 @@ public class CompositeJFrame extends JFrame implements EditView {
     this.p.add(input, BorderLayout.NORTH);
     this.p.add(worksheet, BorderLayout.SOUTH);
 
+    this.instructionsPane = new JTextArea();
+    this.instructionsPane.setText("Welcome to this spreadsheet. Click a cell to access it. \n" +
+            "If you want to change the cell's contents type into the cell and use the confirm  \n" +
+            "button to change the cell. If you don't want to commit the changes you put in the \n" +
+            "textbar, use the clear button to revert the textbar. Also, you can use the delete \n" +
+            "key on a cell to clear its contents (Fn + delete on macs). Enjoy! \n");
+
     this.f.add(p);
     this.f.setSize(800, 501);
     this.f.pack();
+    this.f.add(instructionsPane, BorderLayout.SOUTH);
     this.f.setResizable(false);
     this.currentCoord = new Coord(1, 1);
   }
