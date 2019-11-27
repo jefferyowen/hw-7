@@ -76,11 +76,12 @@ public class CompositeJFrame extends JFrame implements EditView {
             "button to change the cell. If you don't want to commit the changes you put in the \n" +
             "textbar, use the clear button to revert the textbar. Also, you can use the delete \n" +
             "key on a cell to clear its contents (Fn + delete on macs). Enjoy! \n");
+    this.instructionsPane.setEditable(false);
 
+    this.f.add(instructionsPane, BorderLayout.AFTER_LAST_LINE);
     this.f.add(p);
-    this.f.setSize(800, 501);
+    this.f.setSize(1000, 801);
     this.f.pack();
-    this.f.add(instructionsPane, BorderLayout.SOUTH);
     this.f.setResizable(false);
     this.currentCoord = new Coord(1, 1);
   }
