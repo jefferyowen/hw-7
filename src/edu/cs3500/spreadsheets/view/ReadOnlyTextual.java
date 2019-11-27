@@ -8,7 +8,8 @@ import edu.cs3500.spreadsheets.model.Coord;
 import edu.cs3500.spreadsheets.model.WorkSheet;
 
 /**
- * Implementation for a ReadOnly version of a Worksheet.
+ * Implementation for a ReadOnly version of a Worksheet, used as a feature to read in a made
+ * spreadsheet.
  */
 public class ReadOnlyTextual implements ReadOnlyView<Cell> {
   private ArrayList<ArrayList<Cell>> spreadsheet;
