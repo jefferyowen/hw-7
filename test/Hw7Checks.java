@@ -7,6 +7,7 @@ import java.io.FileReader;
 
 import edu.cs3500.spreadsheets.controller.ExcelController;
 import edu.cs3500.spreadsheets.model.Cell;
+import edu.cs3500.spreadsheets.model.Coord;
 import edu.cs3500.spreadsheets.model.SimpleWorkSheetBuilder;
 import edu.cs3500.spreadsheets.model.WorkSheet;
 import edu.cs3500.spreadsheets.model.WorkSheetBasic;
@@ -33,7 +34,7 @@ public class Hw7Checks {
    * @param fileName the file to be evaluated.
    */
   public void initData(String fileName) {
-    String filePath = "/Users/JefferyTannerOwen/Desktop/hw7/resources";
+    String filePath = "/Users/pk/Documents/GitHub/hw5/resources/";
     String file = filePath + "/" + fileName;
     FileReader fileReader = null;
     try {
@@ -46,7 +47,6 @@ public class Hw7Checks {
     ws = WorksheetReader.read(builder, readable);
 
     model = new CompositeJFrame(ws);
-
     controller = new ExcelController(ws, model);
   }
 
@@ -60,6 +60,33 @@ public class Hw7Checks {
 
   }
 
+  @Test
+  public void setSelectedCell() {
+    initData("spreadsheet1.txt");
+    model.updateSelectedCoord(1,1);
+    assertEquals(model.getSelectedCoord(), new Coord(1,1));
+    model.updateSelectedCoord(2,2);
+    controller.setSelectedCell();
+    assertEquals(model.getSelectedCoord(), new Coord(2,2));
+  }
 
+  @Test
+  public void setSelectedCellOutOfOriginalSize() {
+    initData("spreadsheet1.txt");
+    model.updateSelectedCoord(1,1);
+    assertEquals(model.getSelectedCoord(), new Coord(1,1));
+    model.updateSelectedCoord(20,20);
+    controller.setSelectedCell();
+    assertEquals(model.getSelectedCoord(), new Coord(20,20));
+  }
+
+  @Test
+  public void resetTextBar() {
+    initData("spreadsheet1.txt");
+    assertEquals(ws.getStringOfCell(0,0), "6.00");
+    model.setInputString("Ape");
+    controller.resetTextbar();
+    assertEquals("6.00", model.getInputString());
+  }
 
 }

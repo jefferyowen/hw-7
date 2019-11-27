@@ -7,9 +7,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="75e67612-0d55-4a0a-bac3-9174dd4ce53f" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/src/edu/cs3500/spreadsheets/view/ReadOnlyTextual.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/edu/cs3500/spreadsheets/view/ReadOnlyTextual.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/edu/cs3500/spreadsheets/view/ReadOnlyView.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/edu/cs3500/spreadsheets/view/ReadOnlyView.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/edu/cs3500/spreadsheets/view/View.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/edu/cs3500/spreadsheets/view/View.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/hw7_jar/hw7.jar" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/hw7_jar/hw7.jar" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/hw7/edu/cs3500/spreadsheets/view/ReadOnlyTextual.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/hw7/edu/cs3500/spreadsheets/view/ReadOnlyTextual.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/test/hw7/Hw7Checks.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/test/hw7/Hw7Checks.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/Hw7Checks.java" beforeDir="false" afterPath="$PROJECT_DIR$/test/Hw7Checks.java" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -54,7 +56,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Application.edit ss2">
+  <component name="RunManager" selected="JUnit.Hw7Checks.resetTextBar2">
     <configuration name="edit blank" type="Application" factoryName="Application">
       <option name="MAIN_CLASS_NAME" value="edu.cs3500.spreadsheets.BeyondGood" />
       <module name="hw7" />
@@ -100,19 +102,51 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="All in hw7" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="hw7" />
-      <option name="PACKAGE_NAME" value="" />
-      <option name="TEST_OBJECT" value="package" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <configuration name="Hw5Checks" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="hw7" />
       <option name="PACKAGE_NAME" value="" />
       <option name="MAIN_CLASS_NAME" value="Hw5Checks" />
       <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Hw7Checks.resetTextBar2" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="hw7" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="Hw7Checks" />
+      <option name="METHOD_NAME" value="resetTextBar2" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Hw7Checks.resteTextBar" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="hw7" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="Hw7Checks" />
+      <option name="METHOD_NAME" value="resteTextBar" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Hw7Checks.setSelectedCell" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="hw7" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="Hw7Checks" />
+      <option name="METHOD_NAME" value="setSelectedCell" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Hw7Checks.setSelectedCellOutOfOriginalSize" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="hw7" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="Hw7Checks" />
+      <option name="METHOD_NAME" value="setSelectedCellOutOfOriginalSize" />
+      <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -123,13 +157,19 @@
       <item itemvalue="Application.edit ss2" />
       <item itemvalue="Application.edit tri50" />
       <item itemvalue="Application.gui ss1" />
-      <item itemvalue="JUnit.All in hw7" />
       <item itemvalue="JUnit.Hw5Checks" />
+      <item itemvalue="JUnit.Hw7Checks.setSelectedCell" />
+      <item itemvalue="JUnit.Hw7Checks.setSelectedCellOutOfOriginalSize" />
+      <item itemvalue="JUnit.Hw7Checks.resteTextBar" />
+      <item itemvalue="JUnit.Hw7Checks.resetTextBar2" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.Hw7Checks.resetTextBar2" />
+        <item itemvalue="JUnit.Hw7Checks.resteTextBar" />
+        <item itemvalue="JUnit.Hw7Checks.setSelectedCellOutOfOriginalSize" />
+        <item itemvalue="JUnit.Hw7Checks.setSelectedCell" />
         <item itemvalue="JUnit.Hw5Checks" />
-        <item itemvalue="JUnit.All in hw7" />
       </list>
     </recent_temporary>
   </component>
@@ -326,7 +366,14 @@
       <option name="project" value="LOCAL" />
       <updated>1574817756867</updated>
     </task>
-    <option name="localTasksCounter" value="27" />
+    <task id="LOCAL-00027" summary="commit">
+      <created>1574817900671</created>
+      <option name="number" value="00027" />
+      <option name="presentableId" value="LOCAL-00027" />
+      <option name="project" value="LOCAL" />
+      <updated>1574817900671</updated>
+    </task>
+    <option name="localTasksCounter" value="28" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
