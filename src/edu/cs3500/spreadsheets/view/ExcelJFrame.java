@@ -97,6 +97,10 @@ public class ExcelJFrame extends JFrame implements View {
     return this.f.getContentPane();
   }
 
+  /**
+   * Getter for the JTable
+   * @return the JTable
+   */
   public ExcelJTable getJTable() {
     return this.j;
   }
@@ -227,6 +231,10 @@ public class ExcelJFrame extends JFrame implements View {
 
   }
 
+  /**
+   * Updates the current state of the readonly model, and updates the view using this new model.
+   * @param ws the new Worksheet
+   */
   public void updateTable(WorkSheet ws) {
     this.ws = new ReadOnlyTextual(ws);
     this.readData();
