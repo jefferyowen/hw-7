@@ -55,13 +55,14 @@ public class BeyondGood {
         new ExcelJFrame(toReturn).render();
       } else if (args[2].equals("-edit")) {
         new ExcelController(toReturn, new CompositeJFrame(toReturn));
-
       }
     } else if (args[0].equals("-gui")) {
       new ExcelJFrame().render();
     } else if (args[0].equals("-edit")) {
       WorkSheet ws = new WorkSheetBasic(10, 30);
       new ExcelController(ws, new CompositeJFrame(ws));
+    } else if (args[0].equals("-provider")){
+
     }
   }
 }

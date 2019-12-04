@@ -10,7 +10,7 @@ import edu.cs3500.spreadsheets.view.ReadOnlyView;
  *
  * @param <R> the representation of a cell used.
  */
-public interface WorkSheet<R> extends ReadOnlyView {
+public interface WorkSheet<R> extends ReadOnlyView<R> {
 
   public void createWorkSheet(int row, int col);
 
@@ -32,7 +32,7 @@ public interface WorkSheet<R> extends ReadOnlyView {
    * @throws IllegalArgumentException if the Cell being updated does not exist, or the row and col
    *                                  are not valid.
    */
-  public void setCell(int row, int col, CellComponent value) throws IllegalArgumentException;
+
 
   /**
    * Adds a cell to the current Spreadsheet.

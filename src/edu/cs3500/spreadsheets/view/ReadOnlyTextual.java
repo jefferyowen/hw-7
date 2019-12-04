@@ -6,6 +6,7 @@ import edu.cs3500.spreadsheets.model.Cell;
 import edu.cs3500.spreadsheets.model.CellComponent;
 import edu.cs3500.spreadsheets.model.Coord;
 import edu.cs3500.spreadsheets.model.WorkSheet;
+import edu.cs3500.spreadsheets.model.cells.CellComponentBlank;
 
 /**
  * Implementation for a ReadOnly version of a Worksheet, used as a feature to read in a made
@@ -21,6 +22,21 @@ public class ReadOnlyTextual implements ReadOnlyView<Cell> {
    */
   public ReadOnlyTextual(WorkSheet ws) {
     this.spreadsheet = ws.getSpreadSheet();
+  }
+
+  /**
+   * Constructor for a ReadOnly Worksheet, that takes in nothing.
+   */
+  public ReadOnlyTextual() {
+    ArrayList<ArrayList<Cell>> toAdd = new ArrayList<ArrayList<Cell>>();
+    for (int i = 0; i < 10; i++) {
+      ArrayList<Cell> currentRow = new ArrayList<>();
+      this.spreadsheet.add(currentRow);
+      for (int j = 0; j < 10; j++) {
+        Cell toCellAdd = new Cell(new CellComponentBlank(), new Coord(j + 1, i + 1));
+        currentRow.add(toCellAdd);
+      }
+    }
   }
 
   @Override
@@ -49,8 +65,9 @@ public class ReadOnlyTextual implements ReadOnlyView<Cell> {
   }
 
   @Override
-  public void setCell(int row, int col, CellComponent value) {
+  public void setCell(int row, int col, Cell value) {
 
-    this.spreadsheet.get(col).set(row, new Cell(value, new Coord(col + 1, row + 1)));
+    this.spreadsheet.get(col).set(row, new Cell(value.getCellContent(),
+            new Coord(col + 1, row + 1)));
   }
 }

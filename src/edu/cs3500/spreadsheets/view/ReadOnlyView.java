@@ -55,5 +55,5 @@ public interface ReadOnlyView<R> {
    * @param col   the column of the current Cell being updated.
    * @param value the value that the Cell is being set to.
    */
-  public void setCell(int row, int col, CellComponent value);
+  public void setCell(int row, int col, R value);
 }

@@ -14,7 +14,7 @@ import edu.cs3500.spreadsheets.view.EditView;
  * Controller for our -edit function. Allows user to have access to a view and a model.
  */
 public class ExcelController implements Features {
-  private WorkSheet model;
+  private WorkSheet<Cell> model;
   private EditView view;
   private Coord currentCoord;
 
@@ -37,10 +37,10 @@ public class ExcelController implements Features {
     Coord currentCord = view.getSelectedCoord();
     this.currentCoord = new Coord(currentCord.row, currentCord.col);
 
-    Cell c = (Cell) this.model.getCellAt(this.currentCoord.row - 1,
-            this.currentCoord.col - 1);
 
-    this.view.setInputString(c.getCellContent().toString());
+
+    this.view.setInputString(this.model.getCellAt(this.currentCoord.row - 1,
+            this.currentCoord.col - 1).getCellContent().toString());
 
   }
 
@@ -53,17 +53,16 @@ public class ExcelController implements Features {
     CellComponent toAdd =
             toAddSexp.accept(new SexpVisitorCellComponent(this.model,
                     this.currentCoord.col, this.currentCoord.row));
-
-    this.model.setCell(this.currentCoord.row - 1, this.currentCoord.col - 1,
-            toAdd);
+    Cell toAddCell = new Cell(toAdd, this.currentCoord);
+    this.model.setCell(this.currentCoord.row, this.currentCoord.col, toAddCell);
     this.view.updateModel(this.model);
   }
 
   @Override
   public void clearCell() {
     this.view.clearInputString();
-    this.model.setCell(this.currentCoord.row - 1, this.currentCoord.col - 1,
-            new CellComponentBlank());
+    Cell toAddCell = new Cell(new CellComponentBlank(), this.currentCoord);
+    this.model.setCell(this.currentCoord.row, this.currentCoord.col, toAddCell);
     this.view.updateModel(this.model);
   }
 

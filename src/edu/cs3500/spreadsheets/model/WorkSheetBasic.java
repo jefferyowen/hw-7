@@ -38,14 +38,15 @@ public class WorkSheetBasic implements WorkSheet<Cell> {
     return this.getCellAt(row, col).getCellContent().evaluate();
   }
 
-
   @Override
-  public void setCell(int row, int col, CellComponent value) throws IllegalArgumentException {
+  public void setCell(int row, int col, Cell value) throws IllegalArgumentException {
     if (col + 1 > this.spreadsheet.size() || row + 1 > this.spreadsheet.get(col).size()) {
       this.addCell(row, col);
     }
-    this.spreadsheet.get(col).set(row, new Cell(value, new Coord(col + 1, row + 1)));
+    this.spreadsheet.get(col).set(row, new Cell(value.getCellContent(),
+            new Coord(col + 1, row + 1)));
   }
+
 
   @Override
   public void addCell(int row, int col) {
@@ -125,7 +126,6 @@ public class WorkSheetBasic implements WorkSheet<Cell> {
   public int getNumCols() {
     return this.spreadsheet.size();
   }
-
 
 
 }

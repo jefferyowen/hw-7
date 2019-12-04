@@ -23,6 +23,7 @@ public class SexpVisitorCellComponent implements SexpVisitor<CellComponent> {
   private final SSymbol PRODUCT = new SSymbol("PRODUCT");
   private final SSymbol LESSTHAN = new SSymbol("<");
   private final SSymbol REPEAT = new SSymbol("REPEAT");
+
   private WorkSheet ws;
   private int col;
   private int row;

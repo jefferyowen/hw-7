@@ -28,8 +28,10 @@ public class SimpleWorkSheetBuilder implements WorksheetBuilder<WorkSheetBasic> 
     Sexp toAddSexp = Parser.parse(contents);
     CellComponent value = toAddSexp.accept(new SexpVisitorCellComponent(this.workSheetToMake, col
             , row));
+    Coord toAddCord = new Coord (col, row);
+    Cell toAdd = new Cell(value, toAddCord);
     this.workSheetToMake.addCell(row - 1, col - 1);
-    this.workSheetToMake.setCell(row - 1, col - 1, value);
+    this.workSheetToMake.setCell(row - 1, col - 1,  toAdd);
     return this;
   }
 

@@ -16,6 +16,7 @@ import javax.swing.table.DefaultTableCellRenderer;
 import javax.swing.table.DefaultTableModel;
 import javax.swing.table.TableColumn;
 
+import edu.cs3500.spreadsheets.model.Cell;
 import edu.cs3500.spreadsheets.model.WorkSheet;
 import edu.cs3500.spreadsheets.model.WorkSheetBasic;
 
@@ -30,7 +31,7 @@ public class ExcelJFrame extends JFrame implements View {
   private JFrame f;
   private ExcelJTable j;
   private DefaultTableModel dtm;
-  private ReadOnlyTextual ws;
+  private ReadOnlyView<Cell> ws;
 
   /**
    * Constructor for Graphical view given Worksheet.
@@ -78,7 +79,6 @@ public class ExcelJFrame extends JFrame implements View {
     this.dtm = new DefaultTableModel(row, col);
 
     j = new ExcelJTable(dtm);
-
 
     p = new JPanel();
 
