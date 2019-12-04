@@ -52,11 +52,35 @@ public class Hw7Checks {
 
 
   @Test
-  public void setCellContentsOfCell(){
+  public void setCellContentsOfCell1(){
     initData("spreadsheet2.txt");
     Assert.assertEquals(" 3.00", ws.getCellAt(0,0).toString());
     controller.setCellContentsOfCell("=4.00");
     Assert.assertEquals(" 4.00", ws.getCellAt(0,0).toString());
+
+  }
+  @Test
+  public void setCellContentsOfCell2(){
+    initData("spreadsheet1.txt");
+    Assert.assertEquals(" 6.00", ws.getCellAt(0,0).toString());
+    controller.setCellContentsOfCell("=\"FUDGE\"");
+    Assert.assertEquals( "\"FUDGE\"", ws.getCellAt(0,0).toString());
+
+  }
+  @Test(expected = IllegalArgumentException.class)
+  public void setCellContentsOfCell3(){
+    initData("spreadsheet3.txt");
+    Assert.assertEquals(" 3.00", ws.getCellAt(0,0).toString());
+    controller.setCellContentsOfCell("=4.00");
+    Assert.assertEquals(" 4.00", ws.getCellAt(0,0).toString());
+
+  }
+  @Test
+  public void setCellContentsOfCell4(){
+    initData("fifty_triangular.txt");
+    Assert.assertEquals(" 1.00", ws.getCellAt(0,0).toString());
+    controller.setCellContentsOfCell("500000");
+    Assert.assertEquals("500000.00", ws.getCellAt(0,0).toString());
 
   }
 

@@ -6,11 +6,22 @@
     </artifacts-to-build>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="75e67612-0d55-4a0a-bac3-9174dd4ce53f" name="Default Changelist" comment="">
+    <list default="true" id="75e67612-0d55-4a0a-bac3-9174dd4ce53f" name="Default Changelist" comment="Merge branch 'master' of https://github.com/jefferyowen/hw-7&#10;&#10;# Conflicts:&#10;#&#9;.idea/workspace.xml&#10;#&#9;out/artifacts/hw7_jar/hw7.jar&#10;#&#9;out/test/hw7/Hw7Checks.class">
+      <change afterPath="$PROJECT_DIR$/src/edu/cs3500/spreadsheets/provider/model/Function.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/artifacts/hw7_jar/hw7.jar" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/hw7_jar/hw7.jar" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/hw7/edu/cs3500/spreadsheets/view/ReadOnlyTextual.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/hw7/edu/cs3500/spreadsheets/view/ReadOnlyTextual.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/test/hw7/Hw7Checks.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/test/hw7/Hw7Checks.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/hw7.jar" beforeDir="false" afterPath="$PROJECT_DIR$/resources/hw7.jar" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/screenshots GUI/T(10) Triangular.png" beforeDir="false" afterPath="$PROJECT_DIR$/resources/screenshots GUI/T(10) Triangular.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/edu/cs3500/spreadsheets/BeyondGood.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/edu/cs3500/spreadsheets/BeyondGood.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/edu/cs3500/spreadsheets/controller/ExcelController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/edu/cs3500/spreadsheets/controller/ExcelController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/edu/cs3500/spreadsheets/model/SexpVisitorCellComponent.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/edu/cs3500/spreadsheets/model/SexpVisitorCellComponent.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/edu/cs3500/spreadsheets/model/SimpleWorkSheetBuilder.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/edu/cs3500/spreadsheets/model/SimpleWorkSheetBuilder.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/edu/cs3500/spreadsheets/model/WorkSheet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/edu/cs3500/spreadsheets/model/WorkSheet.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/edu/cs3500/spreadsheets/model/WorkSheetBasic.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/edu/cs3500/spreadsheets/model/WorkSheetBasic.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/edu/cs3500/spreadsheets/view/ExcelJFrame.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/edu/cs3500/spreadsheets/view/ExcelJFrame.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/edu/cs3500/spreadsheets/view/ReadOnlyTextual.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/edu/cs3500/spreadsheets/view/ReadOnlyTextual.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/edu/cs3500/spreadsheets/view/ReadOnlyView.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/edu/cs3500/spreadsheets/view/ReadOnlyView.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/test/Hw7Checks.java" beforeDir="false" afterPath="$PROJECT_DIR$/test/Hw7Checks.java" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -38,11 +49,20 @@
     <property name="Repository.Attach.JavaDocs" value="false" />
     <property name="Repository.Attach.Sources" value="false" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/edu/cs3500/spreadsheets/provider/view" />
     <property name="project.structure.last.edited" value="Artifacts" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
     <property name="settings.editor.selected.configurable" value="preferences.sourceCode.Java" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/edu/cs3500/spreadsheets/provider/model" />
+      <recent name="$PROJECT_DIR$/src" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/edu/cs3500/spreadsheets/provider/view" />
+    </key>
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -56,7 +76,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="JUnit.Hw7Checks.resetTextBar2">
+  <component name="RunManager" selected="Application.edit tri50">
     <configuration name="edit blank" type="Application" factoryName="Application">
       <option name="MAIN_CLASS_NAME" value="edu.cs3500.spreadsheets.BeyondGood" />
       <module name="hw7" />
@@ -111,6 +131,15 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="Hw7Checks" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="hw7" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="Hw7Checks" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="Hw7Checks.resetTextBar2" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="hw7" />
       <option name="PACKAGE_NAME" value="" />
@@ -157,21 +186,13 @@
       <item itemvalue="Application.edit ss2" />
       <item itemvalue="Application.edit tri50" />
       <item itemvalue="Application.gui ss1" />
+      <item itemvalue="JUnit.Hw7Checks" />
       <item itemvalue="JUnit.Hw5Checks" />
       <item itemvalue="JUnit.Hw7Checks.setSelectedCell" />
       <item itemvalue="JUnit.Hw7Checks.setSelectedCellOutOfOriginalSize" />
       <item itemvalue="JUnit.Hw7Checks.resteTextBar" />
       <item itemvalue="JUnit.Hw7Checks.resetTextBar2" />
     </list>
-    <recent_temporary>
-      <list>
-        <item itemvalue="JUnit.Hw7Checks.resetTextBar2" />
-        <item itemvalue="JUnit.Hw7Checks.resteTextBar" />
-        <item itemvalue="JUnit.Hw7Checks.setSelectedCellOutOfOriginalSize" />
-        <item itemvalue="JUnit.Hw7Checks.setSelectedCell" />
-        <item itemvalue="JUnit.Hw5Checks" />
-      </list>
-    </recent_temporary>
   </component>
   <component name="SvnConfiguration">
     <configuration />
@@ -367,11 +388,11 @@
       <updated>1574817756867</updated>
     </task>
     <task id="LOCAL-00027" summary="commit">
-      <created>1574817900671</created>
+      <created>1574818189174</created>
       <option name="number" value="00027" />
       <option name="presentableId" value="LOCAL-00027" />
       <option name="project" value="LOCAL" />
-      <updated>1574817900671</updated>
+      <updated>1574818189174</updated>
     </task>
     <option name="localTasksCounter" value="28" />
     <servers />
@@ -391,7 +412,8 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="commit" />
-    <option name="LAST_COMMIT_MESSAGE" value="commit" />
+    <MESSAGE value="Merge branch 'master' of https://github.com/jefferyowen/hw-7&#10;&#10;# Conflicts:&#10;#&#9;.idea/workspace.xml&#10;#&#9;out/artifacts/hw7_jar/hw7.jar&#10;#&#9;out/test/hw7/Hw7Checks.class" />
+    <option name="LAST_COMMIT_MESSAGE" value="Merge branch 'master' of https://github.com/jefferyowen/hw-7&#10;&#10;# Conflicts:&#10;#&#9;.idea/workspace.xml&#10;#&#9;out/artifacts/hw7_jar/hw7.jar&#10;#&#9;out/test/hw7/Hw7Checks.class" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/hw7$edit_ss2.ic" NAME="edit ss2 Coverage Results" MODIFIED="1574808585121" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
