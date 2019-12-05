@@ -87,7 +87,8 @@ public class JPanelEditSpreadsheet extends JPanelSpreadsheet {
     });
 
     if (controller.getSelectedCell() != null) {
-      textbox.setText("hi");
+      textbox.setText("=" + controller.getMap()
+              .get(controller.getSelectedCell()).getValue().getRawValue().toString());
     }
 
     this.setVisible(true);
