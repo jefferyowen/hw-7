@@ -32,7 +32,7 @@ public interface WorkSheet<R> extends ReadOnlyView<R> {
    * @throws IllegalArgumentException if the Cell being updated does not exist, or the row and col
    *                                  are not valid.
    */
-
+  public void setCell(int row, int col, R value);
 
   /**
    * Adds a cell to the current Spreadsheet.

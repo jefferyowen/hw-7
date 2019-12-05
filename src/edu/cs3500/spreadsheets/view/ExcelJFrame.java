@@ -18,7 +18,7 @@ import javax.swing.table.TableColumn;
 
 import edu.cs3500.spreadsheets.model.Cell;
 import edu.cs3500.spreadsheets.model.WorkSheet;
-import edu.cs3500.spreadsheets.model.WorkSheetBasic;
+
 
 /**
  * Graphical view for our Excel Spreadsheet. Puts spreadsheet into a grid view, able to see values
@@ -68,7 +68,7 @@ public class ExcelJFrame extends JFrame implements View {
    * Constructor for Graphical view that is blank and set to a default size.
    */
   public ExcelJFrame() {
-    this.ws = new ReadOnlyTextual(new WorkSheetBasic(10, 10));
+    this.ws = new ReadOnlyTextual();
 
     this.f = new JFrame();
     this.f.setTitle("Excel Spreadsheet");
@@ -98,7 +98,7 @@ public class ExcelJFrame extends JFrame implements View {
   }
 
   /**
-   * Getter for the JTable
+   * Getter for the JTable.
    * @return the JTable
    */
   public ExcelJTable getJTable() {

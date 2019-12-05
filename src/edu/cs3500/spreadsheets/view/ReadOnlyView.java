@@ -1,7 +1,5 @@
 package edu.cs3500.spreadsheets.view;
 
-import edu.cs3500.spreadsheets.model.CellComponent;
-
 /**
  * Worksheet that is only able to be read, not modified. Used for Views.
  */
