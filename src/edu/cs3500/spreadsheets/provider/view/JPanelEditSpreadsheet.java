@@ -17,7 +17,7 @@ import edu.cs3500.spreadsheets.provider.controller.SpreadSheetControllerInterfac
  * Represents a editable panel in the edit view that the user can interact with.
  */
 public class JPanelEditSpreadsheet extends JPanelSpreadsheet {
-  private SpreadSheetControllerInterface<Coord,Cell> controller;
+  private SpreadSheetControllerInterface controller;
   private CellEditTextField textbox;
 
   /**

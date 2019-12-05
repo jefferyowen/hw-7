@@ -59,7 +59,7 @@ public class BeyondGood {
       } else if (args[2].equals("-edit")) {
         new ExcelController(toReturn, new CompositeJFrame(toReturn));
       } else if (args[2].equals("-provider")) {
-        new EditorView(new ControllerAdapted(new WorkSheetAdapted(toReturn)));
+        new ControllerAdapted(new WorkSheetAdapted(toReturn));
       }
     } else if (args[0].equals("-gui")) {
       new ExcelJFrame().render();
@@ -68,7 +68,7 @@ public class BeyondGood {
       new ExcelController(ws, new CompositeJFrame(ws));
     } else if (args[0].equals("-provider")) {
       WorkSheet ws = new WorkSheetBasic(10, 30);
-      new EditorView(new ControllerAdapted(new WorkSheetAdapted(ws)));
+      new ControllerAdapted(new WorkSheetAdapted(ws));
     }
   }
 }

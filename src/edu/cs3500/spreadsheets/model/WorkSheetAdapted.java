@@ -21,18 +21,10 @@ public class WorkSheetAdapted implements Worksheet<Coord, Cell, CellComponent>, 
     this.setUp();
   }
 
-  public WorkSheetAdapted(HashMap <Coord, Cell> map) {
-    this.wsOriginal = new WorkSheetBasic(10,10);
-    this.mapOfSheet = map;
-    this.setUp();
-  }
-
   /**
    * Changes the ArrayList of Cells to a hashmap of Cells and Coords.
    */
   private void setUp() {
-    ArrayList<ArrayList<Cell>> theOldData = new ArrayList<ArrayList<Cell>>
-            (this.wsOriginal.getSpreadSheet());
     for(int i = 0; i < this.wsOriginal.getNumCols(); i++) {
       for(int j = 0; j < this.wsOriginal.getNumRows(); j++) {
         Coord toAddCoord = new Coord(i+1, j+1);

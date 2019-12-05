@@ -37,7 +37,6 @@ public class EditorView extends JFrame implements SpreadsheetView {
     this.getContentPane().add(hbar, BorderLayout.SOUTH);
     this.getContentPane().add(vbar, BorderLayout.EAST);
 
-
     this.pack();
     this.setVisible(true);
   }
@@ -46,7 +45,6 @@ public class EditorView extends JFrame implements SpreadsheetView {
   @Override
   public void render() {
     this.add(new JPanelEditSpreadsheet(spreadsheet, controller));
-
   }
 
   @Override

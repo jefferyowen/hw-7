@@ -8,25 +8,25 @@ import edu.cs3500.spreadsheets.provider.model.Coord;
 /**
  * Allows the user to manipulate the model through the view.
  */
-public interface SpreadSheetControllerInterface<K,V> {
+public interface SpreadSheetControllerInterface {
 
 
   /**
    * Edits an existing Cell in some manner.
    */
-  void callEditCell(K cell, String s);
+  void callEditCell(Coord cell, String s);
 
 
   /**
    * Adds a Cell to the model.
    */
-  void callAddCell(K cell, String s);
+  void callAddCell(Coord cell, String s);
 
 
   /**
    * gets the map of the model.
    */
-  Map<K, V> getMap();
+  Map<Coord, Cell> getMap();
 
   /**
    * Returns the user selected cell.
@@ -36,6 +36,6 @@ public interface SpreadSheetControllerInterface<K,V> {
   /**
    * Sets the user selected cell.
    */
-  void setSelectedCell(K c);
+  void setSelectedCell(Coord c);
 }
 
