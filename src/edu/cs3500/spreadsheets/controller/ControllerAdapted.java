@@ -10,20 +10,16 @@ import edu.cs3500.spreadsheets.provider.controller.SpreadSheetControllerInterfac
 import edu.cs3500.spreadsheets.model.Coord;
 import edu.cs3500.spreadsheets.provider.model.Worksheet;
 import edu.cs3500.spreadsheets.provider.view.SpreadsheetView;
-import edu.cs3500.spreadsheets.view.CompositeJFrame;
-import edu.cs3500.spreadsheets.view.EditView;
+
 
 public class ControllerAdapted implements SpreadSheetControllerInterface<Coord, Cell> {
 
   private SpreadsheetView view;
-  private Features adaptedController;
   private Worksheet<Coord, Cell, CellComponent> adaptedModel;
   private Coord currentCorrd;
 
-  public ControllerAdapted(WorkSheet ws, SpreadsheetView view) {
-    this.adaptedController = new ExcelController(ws, new CompositeJFrame(ws));
-    this.adaptedModel = new WorkSheetAdapted(ws);
-    this.view = view;
+  public ControllerAdapted(Worksheet<Coord, Cell, CellComponent> ws) {
+    this.adaptedModel = ws;
     this.currentCorrd = new Coord(1, 1);
   }
 
@@ -31,8 +27,7 @@ public class ControllerAdapted implements SpreadSheetControllerInterface<Coord, 
   public void callEditCell(Coord cell, String s) {
     this.setSelectedCell(cell);
     this.adaptedModel.addCell(cell, s);
-    this.adaptedController.setCellContentsOfCell(s);
-   // this.view.refresh();
+    this.view.refresh();
   }
 
   @Override
@@ -54,9 +49,8 @@ public class ControllerAdapted implements SpreadSheetControllerInterface<Coord, 
 
   @Override
   public void setSelectedCell(Coord c) {
-    this.adaptedController.setSelectedCell();
     this.currentCorrd = c;
-   // this.view.refresh();
+    this.view.refresh();
   }
 
 }

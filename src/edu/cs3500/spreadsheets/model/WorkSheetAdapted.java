@@ -17,7 +17,7 @@ public class WorkSheetAdapted implements Worksheet<Coord, Cell, CellComponent>, 
 
   public WorkSheetAdapted(WorkSheet ws) {
     this.wsOriginal = ws;
-    this.mapOfSheet = new HashMap<Coord, Cell>();
+    this.mapOfSheet = new HashMap<>();
     this.setUp();
   }
 
