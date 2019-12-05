@@ -54,7 +54,7 @@ public class ExcelController implements Features {
             toAddSexp.accept(new SexpVisitorCellComponent(this.model,
                     this.currentCoord.col, this.currentCoord.row));
     Cell toAddCell = new Cell(toAdd, this.currentCoord);
-    this.model.setCell(this.currentCoord.row, this.currentCoord.col, toAddCell);
+    this.model.setCell(this.currentCoord.row - 1, this.currentCoord.col - 1, toAddCell);
     this.view.updateModel(this.model);
   }
 
@@ -62,7 +62,7 @@ public class ExcelController implements Features {
   public void clearCell() {
     this.view.clearInputString();
     Cell toAddCell = new Cell(new CellComponentBlank(), this.currentCoord);
-    this.model.setCell(this.currentCoord.row, this.currentCoord.col, toAddCell);
+    this.model.setCell(this.currentCoord.row - 1, this.currentCoord.col - 1, toAddCell);
     this.view.updateModel(this.model);
   }
 
@@ -70,5 +70,10 @@ public class ExcelController implements Features {
   public void resetTextbar() {
     this.view.setInputString(this.model.getStringOfCell(this.currentCoord.col - 1,
             this.currentCoord.row - 1));
+  }
+
+  @Override
+  public Coord getCurrentCoord() {
+    return this.currentCoord;
   }
 }

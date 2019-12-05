@@ -9,8 +9,9 @@ import java.util.Map;
 import edu.cs3500.spreadsheets.provider.model.Worksheet;
 import edu.cs3500.spreadsheets.sexp.Parser;
 import edu.cs3500.spreadsheets.sexp.Sexp;
+import edu.cs3500.spreadsheets.view.ReadOnlyView;
 
-public class WorkSheetAdapted implements Worksheet<Coord, Cell, CellComponent> {
+public class WorkSheetAdapted implements Worksheet<Coord, Cell, CellComponent>, ReadOnlyView<Cell> {
   private WorkSheet<Cell> wsOriginal;
   private HashMap<Coord, Cell> mapOfSheet;
 
@@ -20,11 +21,24 @@ public class WorkSheetAdapted implements Worksheet<Coord, Cell, CellComponent> {
     this.setUp();
   }
 
+  public WorkSheetAdapted(HashMap <Coord, Cell> map) {
+    this.wsOriginal = new WorkSheetBasic(10,10);
+    this.mapOfSheet = map;
+    this.setUp();
+  }
+
   /**
    * Changes the ArrayList of Cells to a hashmap of Cells and Coords.
    */
   private void setUp() {
-
+    ArrayList<ArrayList<Cell>> theOldData = new ArrayList<ArrayList<Cell>>
+            (this.wsOriginal.getSpreadSheet());
+    for(int i = 0; i < this.wsOriginal.getNumCols(); i++) {
+      for(int j = 0; j < this.wsOriginal.getNumRows(); j++) {
+        Coord toAddCoord = new Coord(i+1, j+1);
+        this.mapOfSheet.put(toAddCoord, this.wsOriginal.getCellAt(i,j));
+      }
+    }
   }
 
   @Override
@@ -34,7 +48,8 @@ public class WorkSheetAdapted implements Worksheet<Coord, Cell, CellComponent> {
             this.wsOriginal, coordinate.col, coordinate.row));
     Coord toAddCord = coordinate;
     Cell toAdd = new Cell(value, toAddCord);
-    this.mapOfSheet.put(coordinate, toAdd);
+    wsOriginal.setCell(coordinate.row, coordinate.col, toAdd);
+    this.setUp();
   }
 
   @Override
@@ -107,5 +122,35 @@ public class WorkSheetAdapted implements Worksheet<Coord, Cell, CellComponent> {
         throw new IllegalArgumentException("Can't accept cell as there is a cycle created.");
       }
     }
+  }
+
+  @Override
+  public String evaluate(int row, int col) {
+    return wsOriginal.evaluate(row, col);
+  }
+
+  @Override
+  public Cell getCellAt(int row, int col) {
+    return wsOriginal.getCellAt(row, col);
+  }
+
+  @Override
+  public String getStringOfCell(int row, int col) {
+    return wsOriginal.getCellAt(row, col).toString();
+  }
+
+  @Override
+  public int getNumRows() {
+    return wsOriginal.getNumRows();
+  }
+
+  @Override
+  public int getNumCols() {
+    return wsOriginal.getNumCols();
+  }
+
+  @Override
+  public void setCell(int row, int col, Cell value) {
+    wsOriginal.setCell(row, col, value);
   }
 }

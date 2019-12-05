@@ -6,6 +6,7 @@ import java.io.FileOutputStream;
 import java.io.FileReader;
 import java.io.PrintWriter;
 
+import edu.cs3500.spreadsheets.controller.ControllerAdapted;
 import edu.cs3500.spreadsheets.controller.ExcelController;
 import edu.cs3500.spreadsheets.model.Coord;
 import edu.cs3500.spreadsheets.model.SimpleWorkSheetBuilder;
@@ -14,6 +15,7 @@ import edu.cs3500.spreadsheets.model.WorkSheetBasic;
 import edu.cs3500.spreadsheets.model.WorksheetReader;
 import edu.cs3500.spreadsheets.model.WorksheetReader.WorksheetBuilder;
 import edu.cs3500.spreadsheets.view.CompositeJFrame;
+import edu.cs3500.spreadsheets.view.EditViewAdapted;
 import edu.cs3500.spreadsheets.view.ExcelJFrame;
 import edu.cs3500.spreadsheets.view.TextualView;
 
@@ -55,14 +57,17 @@ public class BeyondGood {
         new ExcelJFrame(toReturn).render();
       } else if (args[2].equals("-edit")) {
         new ExcelController(toReturn, new CompositeJFrame(toReturn));
+      } else if (args[2].equals("-provider")) {
+        new ControllerAdapted(toReturn, new EditViewAdapted(toReturn));
       }
     } else if (args[0].equals("-gui")) {
       new ExcelJFrame().render();
     } else if (args[0].equals("-edit")) {
       WorkSheet ws = new WorkSheetBasic(10, 30);
       new ExcelController(ws, new CompositeJFrame(ws));
-    } else if (args[0].equals("-provider")){
-
+    } else if (args[0].equals("-provider")) {
+      WorkSheet ws = new WorkSheetBasic(10, 30);
+      new EditViewAdapted(ws);
     }
   }
 }

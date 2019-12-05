@@ -3,6 +3,7 @@ import org.junit.Test;
 import java.util.ArrayList;
 
 import edu.cs3500.spreadsheets.model.Cell;
+import edu.cs3500.spreadsheets.model.CellComponent;
 import edu.cs3500.spreadsheets.model.Coord;
 import edu.cs3500.spreadsheets.model.WorkSheet;
 import edu.cs3500.spreadsheets.model.WorkSheetBasic;
@@ -47,8 +48,10 @@ public class Hw5Checks {
     ws.addCell(1, 1);
     ArrayList<Coord> cs = new ArrayList<Coord>();
     cs.add(new Coord(1, 1));
-    ws.setCell(1, 1, new CellComponentFormulaReference(cs,
-            new Coord(1, 1), ws));
+    CellComponent toAddCell = new CellComponentFormulaReference(cs,
+            new Coord(1, 1), ws);
+    Cell toAdd = new Cell(toAddCell,new Coord(1,1));
+    ws.setCell(1, 1, toAdd);
     assertEquals(true, ws.getCellAt(1, 1).getCellContent().hasCycle());
   }
 

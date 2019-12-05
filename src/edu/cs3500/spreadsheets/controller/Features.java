@@ -1,5 +1,7 @@
 package edu.cs3500.spreadsheets.controller;
 
+import edu.cs3500.spreadsheets.model.Coord;
+
 /**
  * The features that will be offered by our Controllers.
  */
@@ -29,4 +31,9 @@ public interface Features {
    * Sets the tool bar to the currently selected Cell.
    */
   public void resetTextbar();
+
+  /**
+   * Gets the current selected coord.
+   */
+  public Coord getCurrentCoord();
 }

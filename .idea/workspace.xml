@@ -7,13 +7,30 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="75e67612-0d55-4a0a-bac3-9174dd4ce53f" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/edu/cs3500/spreadsheets/model/WorkSheetAdapted.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/edu/cs3500/spreadsheets/view/EditViewAdapted.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/edu/cs3500/spreadsheets/model/WorkSheet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/edu/cs3500/spreadsheets/model/WorkSheet.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/edu/cs3500/spreadsheets/view/CompositeJFrame.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/edu/cs3500/spreadsheets/view/ExcelJFrame.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/edu/cs3500/spreadsheets/view/ExcelJFrame.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/edu/cs3500/spreadsheets/view/ReadOnlyTextual.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/edu/cs3500/spreadsheets/view/ReadOnlyTextual.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/edu/cs3500/spreadsheets/view/ReadOnlyView.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/edu/cs3500/spreadsheets/view/ReadOnlyView.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/hw7_jar/hw7.jar" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/hw7_jar/hw7.jar" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/hw7/edu/cs3500/spreadsheets/BeyondGood.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/hw7/edu/cs3500/spreadsheets/BeyondGood.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/hw7/edu/cs3500/spreadsheets/controller/ExcelController.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/hw7/edu/cs3500/spreadsheets/controller/ExcelController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/hw7/edu/cs3500/spreadsheets/controller/Features.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/hw7/edu/cs3500/spreadsheets/controller/Features.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/hw7/edu/cs3500/spreadsheets/model/SexpVisitorCellComponent.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/hw7/edu/cs3500/spreadsheets/model/SexpVisitorCellComponent.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/hw7/edu/cs3500/spreadsheets/model/SimpleWorkSheetBuilder.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/hw7/edu/cs3500/spreadsheets/model/SimpleWorkSheetBuilder.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/hw7/edu/cs3500/spreadsheets/model/WorkSheet.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/hw7/edu/cs3500/spreadsheets/model/WorkSheet.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/hw7/edu/cs3500/spreadsheets/model/WorkSheetBasic.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/hw7/edu/cs3500/spreadsheets/model/WorkSheetBasic.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/hw7/edu/cs3500/spreadsheets/view/CompositeJFrame$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/hw7/edu/cs3500/spreadsheets/view/CompositeJFrame$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/hw7/edu/cs3500/spreadsheets/view/CompositeJFrame$2.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/hw7/edu/cs3500/spreadsheets/view/CompositeJFrame$2.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/hw7/edu/cs3500/spreadsheets/view/CompositeJFrame.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/hw7/edu/cs3500/spreadsheets/view/CompositeJFrame.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/hw7/edu/cs3500/spreadsheets/view/ExcelJFrame.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/hw7/edu/cs3500/spreadsheets/view/ExcelJFrame.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/hw7/edu/cs3500/spreadsheets/view/ReadOnlyTextual.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/hw7/edu/cs3500/spreadsheets/view/ReadOnlyTextual.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/hw7/edu/cs3500/spreadsheets/view/ReadOnlyView.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/hw7/edu/cs3500/spreadsheets/view/ReadOnlyView.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/test/hw7/Hw5Checks.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/test/hw7/Hw5Checks.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/test/hw7/Hw7Checks.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/test/hw7/Hw7Checks.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/edu/cs3500/spreadsheets/BeyondGood.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/edu/cs3500/spreadsheets/BeyondGood.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/edu/cs3500/spreadsheets/controller/ControllerAdapted.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/edu/cs3500/spreadsheets/controller/ControllerAdapted.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/edu/cs3500/spreadsheets/controller/ExcelController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/edu/cs3500/spreadsheets/controller/ExcelController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/edu/cs3500/spreadsheets/controller/Features.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/edu/cs3500/spreadsheets/controller/Features.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/edu/cs3500/spreadsheets/model/WorkSheetAdapted.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/edu/cs3500/spreadsheets/model/WorkSheetAdapted.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/Hw5Checks.java" beforeDir="false" afterPath="$PROJECT_DIR$/test/Hw5Checks.java" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -67,7 +84,16 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Application.edit tri50">
+  <component name="RunManager" selected="Application.BeyondGood">
+    <configuration name="BeyondGood" type="Application" factoryName="Application" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="edu.cs3500.spreadsheets.BeyondGood" />
+      <module name="hw7" />
+      <option name="PROGRAM_PARAMETERS" value="-in spreadsheet1.txt -provider" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/resources" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="edit blank" type="Application" factoryName="Application">
       <option name="MAIN_CLASS_NAME" value="edu.cs3500.spreadsheets.BeyondGood" />
       <module name="hw7" />
@@ -113,24 +139,6 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="Hw5Checks" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="hw7" />
-      <option name="PACKAGE_NAME" value="" />
-      <option name="MAIN_CLASS_NAME" value="Hw5Checks" />
-      <option name="TEST_OBJECT" value="class" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="Hw7Checks" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="hw7" />
-      <option name="PACKAGE_NAME" value="" />
-      <option name="MAIN_CLASS_NAME" value="Hw7Checks" />
-      <option name="TEST_OBJECT" value="class" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <configuration name="Hw7Checks.resetTextBar2" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="hw7" />
       <option name="PACKAGE_NAME" value="" />
@@ -171,14 +179,28 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="edu.cs3500.spreadsheets.view in hw7" type="JUnit" factoryName="JUnit" nameIsGenerated="true">
+      <module name="hw7" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="edu.cs3500.spreadsheets.view.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="edu.cs3500.spreadsheets.view" />
+      <option name="TEST_OBJECT" value="package" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <list>
       <item itemvalue="Application.edit blank" />
       <item itemvalue="Application.edit ss1" />
       <item itemvalue="Application.edit ss2" />
       <item itemvalue="Application.edit tri50" />
+      <item itemvalue="Application.BeyondGood" />
       <item itemvalue="Application.gui ss1" />
-      <item itemvalue="JUnit.Hw7Checks" />
-      <item itemvalue="JUnit.Hw5Checks" />
+      <item itemvalue="JUnit.edu.cs3500.spreadsheets.view in hw7" />
       <item itemvalue="JUnit.Hw7Checks.setSelectedCell" />
       <item itemvalue="JUnit.Hw7Checks.setSelectedCellOutOfOriginalSize" />
       <item itemvalue="JUnit.Hw7Checks.resteTextBar" />
@@ -399,7 +421,14 @@
       <option name="project" value="LOCAL" />
       <updated>1575501984989</updated>
     </task>
-    <option name="localTasksCounter" value="30" />
+    <task id="LOCAL-00030" summary="Merge branch 'master' of https://github.com/jefferyowen/hw-7&#10;&#10;# Conflicts:&#10;#&#9;.idea/workspace.xml&#10;#&#9;out/artifacts/hw7_jar/hw7.jar&#10;#&#9;out/test/hw7/Hw7Checks.class">
+      <created>1575513417630</created>
+      <option name="number" value="00030" />
+      <option name="presentableId" value="LOCAL-00030" />
+      <option name="project" value="LOCAL" />
+      <updated>1575513417630</updated>
+    </task>
+    <option name="localTasksCounter" value="31" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
