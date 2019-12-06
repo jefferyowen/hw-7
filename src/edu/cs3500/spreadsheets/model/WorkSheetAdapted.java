@@ -11,10 +11,17 @@ import edu.cs3500.spreadsheets.sexp.Parser;
 import edu.cs3500.spreadsheets.sexp.Sexp;
 import edu.cs3500.spreadsheets.view.ReadOnlyView;
 
+/**
+ * Our adapted worksheet of our clients interface. Utilizes composition.
+ */
 public class WorkSheetAdapted implements Worksheet<Coord, Cell, CellComponent>, ReadOnlyView<Cell> {
   private WorkSheet<Cell> wsOriginal;
   private HashMap<Coord, Cell> mapOfSheet;
 
+  /**
+   * Basic constructor for and adaptedWorksheet.
+   * @param ws the orginal worksheet to be adapted.
+   */
   public WorkSheetAdapted(WorkSheet ws) {
     this.wsOriginal = ws;
     this.mapOfSheet = new HashMap<>();
@@ -25,10 +32,10 @@ public class WorkSheetAdapted implements Worksheet<Coord, Cell, CellComponent>, 
    * Changes the ArrayList of Cells to a hashmap of Cells and Coords.
    */
   private void setUp() {
-    for(int i = 0; i < this.wsOriginal.getNumCols(); i++) {
-      for(int j = 0; j < this.wsOriginal.getNumRows(); j++) {
-        Coord toAddCoord = new Coord(i+1, j+1);
-        this.mapOfSheet.put(toAddCoord, this.wsOriginal.getCellAt(i,j));
+    for (int i = 0; i < this.wsOriginal.getNumCols(); i++) {
+      for (int j = 0; j < this.wsOriginal.getNumRows(); j++) {
+        Coord toAddCoord = new Coord(i + 1, j + 1);
+        this.mapOfSheet.put(toAddCoord, this.wsOriginal.getCellAt(i, j));
       }
     }
   }

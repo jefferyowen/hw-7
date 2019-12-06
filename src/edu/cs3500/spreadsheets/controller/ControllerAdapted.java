@@ -10,20 +10,25 @@ import edu.cs3500.spreadsheets.provider.model.Worksheet;
 import edu.cs3500.spreadsheets.provider.view.EditorView;
 import edu.cs3500.spreadsheets.provider.view.SpreadsheetView;
 
-
+/**
+ * Our adapted version of our clients code.
+ */
 public class ControllerAdapted implements SpreadSheetControllerInterface {
 
   private SpreadsheetView view;
   private Worksheet<Coord, Cell, CellComponent> adaptedModel;
   private Coord currentCorrd;
 
+  /**
+   * Basic constructor for an adapted controller.
+   * @param ws
+   */
   public ControllerAdapted(Worksheet ws) {
     this.adaptedModel = ws;
     this.currentCorrd = new Coord(1, 1);
     this.view = new EditorView(this);
     this.view.render();
   }
-
 
   @Override
   public void callEditCell(Coord cell, String s) {
@@ -53,6 +58,4 @@ public class ControllerAdapted implements SpreadSheetControllerInterface {
   public void setSelectedCell(Coord c) {
     this.currentCorrd = c;
   }
-
-
 }
